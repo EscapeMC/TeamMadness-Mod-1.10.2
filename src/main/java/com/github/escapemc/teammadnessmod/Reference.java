@@ -95,6 +95,8 @@ public class Reference {
 
 
 		MADNESS_CHEST("madness_chest", "madness_chest"),
+		
+		NICK_BAG("nick_bag", "nick_bag"),
 
 		
 		ESCAPEMC_ORE("escapemc_ore", "escapemc_ore"),

@@ -50,6 +50,7 @@ import com.github.escapemc.teammadnessmod.items.mushrromstew_ingot;
 import com.github.escapemc.teammadnessmod.items.mushrromstew_pickaxe;
 import com.github.escapemc.teammadnessmod.items.mushrromstew_shovel;
 import com.github.escapemc.teammadnessmod.items.mushrromstew_sword;
+import com.github.escapemc.teammadnessmod.items.nick_bag;
 import com.github.escapemc.teammadnessmod.items.rabbit_taco;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -143,6 +144,8 @@ public class ModItems {
 	public static Item chicken_taco;
 	public static Item rabbit_taco;
 	public static Item choco_taco;
+	
+	public static Item nick_bag;
 	
 	
 	
@@ -256,7 +259,7 @@ public class ModItems {
 		choco_taco = new choco_taco(9, 2, false).setCreativeTab(Main.TeamMadnessModItemsTab);
 		rabbit_taco = new rabbit_taco(12, 2, false).setCreativeTab(Main.TeamMadnessModItemsTab);
 
-		
+		nick_bag = new nick_bag().setCreativeTab(Main.TeamMadnessModItemsTab);
 		
 		
 	}
@@ -341,6 +344,7 @@ public class ModItems {
 		GameRegistry.register(choco_taco);
 		GameRegistry.register(rabbit_taco);
 
+		GameRegistry.register(nick_bag);
 		
 		
 	}
@@ -426,6 +430,8 @@ public class ModItems {
 		registerRender(choco_taco);
 		registerRender(rabbit_taco);
 
+		registerRender(nick_bag);
+		
 		
 	}
 	
