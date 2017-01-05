@@ -1076,3 +1076,13 @@ java.lang.Exception: Stack Trace
 
 !ENTRY org.eclipse.recommenders.models.rcp 1 0 2017-01-04 15:13:45.413
 !MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from the model repositories. Are you offline?
+!SESSION 2017-01-04 16:40:11.802 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.committers.product -keyring /Users/robertmerryman/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.committers.product -keyring /Users/robertmerryman/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-01-04 16:40:19.097
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
