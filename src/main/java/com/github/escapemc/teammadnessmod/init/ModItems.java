@@ -56,6 +56,7 @@ import com.github.escapemc.teammadnessmod.items.jonahjoe2002_ingot;
 import com.github.escapemc.teammadnessmod.items.jonahjoe2002_pickaxe;
 import com.github.escapemc.teammadnessmod.items.jonahjoe2002_shovel;
 import com.github.escapemc.teammadnessmod.items.jonahjoe2002_sword;
+import com.github.escapemc.teammadnessmod.items.jump_boost_wand;
 import com.github.escapemc.teammadnessmod.items.madness_armor;
 import com.github.escapemc.teammadnessmod.items.madness_axe;
 import com.github.escapemc.teammadnessmod.items.madness_dust;
@@ -210,7 +211,7 @@ public class ModItems {
 		
 	public static Item one_wand;
 	public static Item two_wand;
-	public static Item three_wand;
+	public static Item jump_boost_wand;
 	public static Item water_breathing_wand;
 	
 	
@@ -372,6 +373,7 @@ public class ModItems {
 		ian_bow = new ian_bow().setCreativeTab(Main.TeamMadnessModItemsTab);
 		
 		water_breathing_wand = new water_breathing_wand().setCreativeTab(Main.TeamMadnessModItemsTab);
+		jump_boost_wand = new jump_boost_wand().setCreativeTab(Main.TeamMadnessModItemsTab);
 				
 		
 	}
@@ -495,6 +497,7 @@ public class ModItems {
 		GameRegistry.register(ian_bow);
 		
 		GameRegistry.register(water_breathing_wand);
+		GameRegistry.register(jump_boost_wand);
 		
 		
 	}
@@ -619,6 +622,7 @@ public class ModItems {
 		registerRender(ian_bow);
 		
 		registerRender(water_breathing_wand);
+		registerRender(jump_boost_wand);
 		
 		
 	}

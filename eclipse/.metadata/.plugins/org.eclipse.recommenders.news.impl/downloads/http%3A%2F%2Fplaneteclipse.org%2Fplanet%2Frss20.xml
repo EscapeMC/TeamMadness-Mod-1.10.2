@@ -8,6 +8,405 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Wayne Beaton: License Certification Due Diligence</title>
+	<guid isPermaLink="false">http://waynebeaton.wordpress.com/?p=3812</guid>
+	<link>https://waynebeaton.wordpress.com/2017/01/12/license-certification-due-diligence/</link>
+	<description>&lt;p&gt;With the changes in the &lt;a href=&quot;https://www.eclipse.org/org/documents/Eclipse_IP_Policy.pdf&quot;&gt;Eclipse Intellectual Property (IP) Policy&lt;/a&gt; made in 2016, the Eclipse Foundation now offers two types of IP Due Diligence for the &lt;em&gt;third-party&lt;/em&gt; software used by a project. Our &lt;em&gt;Type A Due Diligence&lt;/em&gt; involves a &lt;strong&gt;license certification &lt;/strong&gt;only and our &lt;em&gt;Type B Due Diligence&lt;/em&gt; provides our traditional &lt;strong&gt;license certification&lt;/strong&gt;, &lt;strong&gt;provenance check&lt;/strong&gt;, and &lt;strong&gt;code scan&lt;/strong&gt; for various sorts of anomalies. I’m excited by this development at least in part because it will help new projects get up to speed more quickly than they could have in the past.&lt;/p&gt;
+&lt;p&gt;Prior to this change, project teams would have to wait until the full application of what we now call &lt;em&gt;Type B&lt;/em&gt; Due Diligence was complete before issuing a release. Now, a project team can opt to push out a &lt;em&gt;Type A&lt;/em&gt; release after having all of their third-party libraries license certified.&lt;/p&gt;
+&lt;p&gt;A project team can decide what level of IP Due Diligence they require for each &lt;em&gt;release&lt;/em&gt;. Hypothetically, a project team could opt to make several &lt;em&gt;Type A&lt;/em&gt; releases followed by a &lt;em&gt;Type B&lt;/em&gt; release, and then switch back. I can foresee this being something that project teams that need to engage in short release cycles will do.&lt;/p&gt;
+&lt;p&gt;We’ve solicited a few existing projects to try out the new IP Due Diligence type and have already approved a handful of third-party libraries as &lt;em&gt;Type A&lt;/em&gt;. The EMO has also started assuming that all new projects use &lt;em&gt;Type A&lt;/em&gt; (license certification) by default. As we move forward, we expect that all new projects will employ &lt;em&gt;Type A&lt;/em&gt; Due Diligence for all incubation releases and then decide whether or not to switch to &lt;em&gt;Type B&lt;/em&gt; (license certification, provenance check, and code scan) for their graduation. There is, of course, no specific requirement to switch at graduation or ever, but we’re going to encourage project teams to defer the decision of whether or not to switch from &lt;em&gt;Type A&lt;/em&gt; until that point.&lt;/p&gt;
+&lt;p&gt;After graduation, project teams can decide what they want to do. We foresee at least some project teams opting to issue regular multiple &lt;em&gt;Type A&lt;/em&gt; releases along with an annual &lt;em&gt;Type B&lt;/em&gt; release (at this point in the time, there is no specific requirement to be &lt;em&gt;Type A&lt;/em&gt; or &lt;em&gt;Type B&lt;/em&gt; to participate in the simultaneous release).&lt;/p&gt;
+&lt;p&gt;We’ve started rolling out some changes to the infrastructure to support this update to the IP Due Diligence process. I’ll introduce those changes in my next post.&lt;/p&gt;&lt;br /&gt;  &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/waynebeaton.wordpress.com/3812/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/waynebeaton.wordpress.com/3812/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=waynebeaton.wordpress.com&amp;amp;blog=19425814&amp;amp;post=3812&amp;amp;subd=waynebeaton&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 12 Jan 2017 20:02:16 +0000</pubDate>
+</item>
+<item>
+	<title>Tom Schindl: Making @Service annotation even cleverer</title>
+	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=4893</guid>
+	<link>https://tomsondev.bestsolution.at/2017/01/12/making-service-annotation-even-cleverer/</link>
+	<description>&lt;p&gt;As some of you might know e(fx)clipse provides a &lt;a href=&quot;https://tomsondev.bestsolution.at/2014/12/15/eclipse-di-and-osgi-services-and-dynamics/&quot;&gt;Eclipse DI extension&lt;/a&gt; supporting more powerful feature when we deal with OSGi-Services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Support for dynamics (eg if a higher-ranked service comes along you get it injected, …)&lt;/li&gt;
+&lt;li&gt;Support for service list&lt;/li&gt;
+&lt;li&gt;ServiceFactory support because the request is made from the correct Bundle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since tonights build the &lt;code&gt;@Service&lt;/code&gt; annotation has support to define:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A static compile time defined LDAP-Filter expression
+&lt;pre class=&quot;brush: java; title: ; notranslate&quot;&gt;public class MySQLDIComponent {
+  @Inject
+  public void setDataSource(
+    @Service(filterExpression=&quot;(dbtype=mysql)&quot;) 
+    DataSource ds) {
+     // ...
+  }
+}
+
+public class H2DIComponent {
+  @Inject
+  public void setDataSource(
+    @Service(filterExpression=&quot;(dbtype=h2)&quot;) 
+    DataSource ds) {
+     // ...
+  }
+}
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;A dynamic LDAP-Filter expression who is calculated at runtime and can change at any time
+&lt;pre class=&quot;brush: java; title: ; notranslate&quot;&gt;public class CurrentDatasource extends BaseValueObservable&amp;lt;String&amp;gt; implements OString {
+  @Inject
+  public CurrentDatasource(
+    @Preference(key=&quot;database&quot;,defaultValue=&quot;h2&quot;) String database) {
+    super(database);
+  }
+
+  @Inject
+  public void setDatabase(
+    @Preference(key=&quot;database&quot;,defaultValue=&quot;h2&quot;) String database) {
+    setValue(database);
+  }
+}
+
+public class DIComponent {
+  @Inject
+  public void setDataSource(
+    @Service(dynamicFilterExpression=CurrentDatasource.class)
+    DataSource ds) {
+    // ...
+  }
+}
+&lt;/pre&gt;
+&lt;p&gt;You notice the dynamic provider itself if integration fully into the DI-Story &lt;img alt=&quot;😉&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f609.png&quot; style=&quot;height: 1em;&quot; /&gt;
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;br /&gt;  &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/tomsondev.wordpress.com/4893/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/tomsondev.wordpress.com/4893/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=tomsondev.bestsolution.at&amp;amp;blog=7995503&amp;amp;post=4893&amp;amp;subd=tomsondev&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 12 Jan 2017 18:45:55 +0000</pubDate>
+</item>
+<item>
+	<title>JBoss Tools Team: JBoss Tools 4.4.3.AM1 for Eclipse Neon.2</title>
+	<guid isPermaLink="true">https://tools.jboss.org/blog/am1-for-neon.2.html</guid>
+	<link>https://tools.jboss.org/blog/am1-for-neon.2.html</link>
+	<description>&lt;div&gt;&lt;div id=&quot;preamble&quot;&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Happy to announce 4.4.3.AM1 (Developer Milestone 1) build for Eclipse Neon.2.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Downloads available at &lt;a href=&quot;https://tools.jboss.org/downloads/jbosstools/neon/4.4.3.AM1.html&quot;&gt;JBoss Tools 4.4.3 AM1&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;what-is-new&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#what-is-new&quot;&gt;&lt;/a&gt;What is New?&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Full info is at &lt;a href=&quot;https://tools.jboss.org/documentation/whatsnew/jbosstools/4.4.3.AM1.html&quot;&gt;this page&lt;/a&gt;. Some highlights are below.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;openshift-3&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#openshift-3&quot;&gt;&lt;/a&gt;OpenShift 3&lt;/h3&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Although our main focus is bug fixes, we continue to work on providing better experience for container based development in JBoss Tools and Developer Studio. Let’s go through a few interesting updates here and you can find more details on &lt;a href=&quot;https://tools.jboss.org/documentation/whatsnew/jbosstools/4.4.2.AM1.html&quot;&gt;the What’s New page&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;scaling-from-pod-resources&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;http://tools.jboss.org/blog/news.atom#scaling-from-pod-resources&quot;&gt;&lt;/a&gt;Scaling from pod resources&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;When an application is being deployed to Openshift, it was possible to scale the pod resources from the
+      service resource.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;scale command from service&quot; src=&quot;https://tools.jboss.org/documentation/whatsnew/openshift/images/scale-command-from-service.png&quot; width=&quot;600&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;However, it was not a very logical choice. So the command is also available at the pod level, leading to better usability.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;imageblock&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+      &lt;img alt=&quot;scale command from pod&quot; src=&quot;https://tools.jboss.org/documentation/whatsnew/openshift/images/scale-command-from-pod.png&quot; width=&quot;600&quot; /&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Enjoy!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Jeff Maury&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Wed, 11 Jan 2017 21:51:27 +0000</pubDate>
+</item>
+<item>
+	<title>Maximilian and Jonas: JSON Forms – Day 3 – Extending the UI Schema</title>
+	<guid isPermaLink="false">http://eclipsesource.com/blogs/?p=27490</guid>
+	<link>http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/</link>
+	<description>&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;a href=&quot;http://jsonforms.org&quot;&gt;JSON Forms&lt;/a&gt; is a framework to efficiently build form-based web UIs. These UIs are targeted at entering, modifying and viewing data and are usually embedded within an application. JSONForms eliminates the need to write HTML templates and Javascript for manual databinding to create customizable forms by leveraging the capabilities of JSON and &lt;/span&gt;&lt;a href=&quot;http://json-schema.org/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;JSON schema&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; as well as by providing a simple and declarative way of describing forms. Forms are then rendered within a UI framework – currently based on AngularJS. &lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;If you would like to know more about JSON Forms the &lt;/span&gt;&lt;a href=&quot;http://jsonforms.org/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;JSON Forms homepage&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; is a good starting point&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;In this blog series, we would like to introduce the framework based on a real-world example application, a task tracker called “Make It happen”. On &lt;a href=&quot;http://eclipsesource.com/blogs/2016/12/21/json-forms-make-it-happen-blog-series-pilot/&quot;&gt;day 0 and 1&lt;/a&gt; we defined our first form and on &lt;a href=&quot;http://eclipsesource.com/blogs/2016/12/27/json-forms-day-2-introducing-the-ui-schema/&quot;&gt;day 2 we introduced the UI schema&lt;/a&gt; and adapted it for our sample application.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Day 2 resulted in a functional form looking like this:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2016/12/jsonforms_blogseries_day2_form.png&quot;&gt;&lt;img alt=&quot;jsonforms_blogseries_day2_form&quot; class=&quot;alignnone size-full wp-image-27488&quot; height=&quot;299&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2016/12/jsonforms_blogseries_day2_form.png&quot; width=&quot;511&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you would like to follow this blog series please &lt;a href=&quot;https://twitter.com/jsonforms&quot;&gt;follow us on twitter&lt;/a&gt;. We will announce every new blog post on JSON Forms there.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;The goal of our third iteration on the “Make It Happen” example is to enhance the data schema with additional attributes and update the UI schema accordingly. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;So far, the JSON Schema for our data entity defined three attributes:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;“Name” (String) – mandatory&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;“Description” (multi-line String)&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;“Done” (Boolean).&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;In our third iteration, we add two additional attributes to the Task entity. These additional attributes are:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;“Due Date” (Date)&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;“Rating” (Integer)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As JSON Forms facilitates JSON Schema as a basis for all forms, we start with enhancing the data schema with the new attributes. The following listing shows the complete data schema, only due_date and rating have to be added, though:&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;name&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+      },
+      &quot;description&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+      },
+      &quot;done&quot;: {
+        &quot;type&quot;: &quot;boolean&quot;
+      },
+      &quot;due_date&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;format&quot;: &quot;date&quot;
+      },
+      &quot;rating&quot;: {
+        &quot;type&quot;: &quot;integer&quot;,
+        &quot;maximum&quot;: 5
+      }
+    },
+    &quot;required&quot;: [&quot;name&quot;]
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Based on the extended data schema, we also need to extend the UI schema to add the new properties to our rendered form:&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;type&quot;: &quot;VerticalLayout&quot;,
+  &quot;elements&quot;: [
+    {
+      &quot;type&quot;: &quot;Control&quot;,
+      &quot;scope&quot;: {
+        &quot;$ref&quot;: &quot;#/properties/name&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Control&quot;,
+      &quot;label&quot;: false,
+      &quot;scope&quot;: {
+        &quot;$ref&quot;: &quot;#/properties/done&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Control&quot;,
+      &quot;scope&quot;: {
+        &quot;$ref&quot;: &quot;#/properties/description&quot;
+      },
+      &quot;options&quot;: {
+        &quot;multi&quot;:true
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Control&quot;,
+      &quot;scope&quot;: {
+        &quot;$ref&quot;: &quot;#/properties/due_date&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Control&quot;,
+      &quot;scope&quot;: {
+        &quot;$ref&quot;: &quot;#/properties/rating&quot;
+      }
+    }
+  ]
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Based on those two schemas, the JSON Form renderer will now automatically produce this form:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2016/12/jsonforms_blogseries_day3_form.png&quot;&gt;&lt;img alt=&quot;jsonforms_blogseries_day3_form&quot; class=&quot;alignnone size-full wp-image-27491&quot; height=&quot;463&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/uploads/2016/12/jsonforms_blogseries_day3_form.png&quot; width=&quot;566&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Note that JSON Forms automatically creates the correct widgets for the new attributes: a date picker for “due date” and a input field for “rating”. For rating it would be nice to have a more special control, though. This is possible with JSON Forms and will be described later in this series. Please also note that those controls are automatically bound to the underlying data and provide the default features such as validation.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Another interesting feature often required in forms is to control the visibility of certain controls based on the current input data. This is supported in JSON Forms, we will describe this rule-based visibility next week.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;If you are interested in trying out JSON Forms, please refer to the &lt;/span&gt;&lt;a href=&quot;http://github.eclipsesource.com/jsonforms/#/docs/firstform&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Getting-Started tutorial&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;. It explains how to set up JSON Forms in your project and how you can try the first steps out yourself. If you would like to follow this blog series, please &lt;a href=&quot;https://twitter.com/jsonforms&quot;&gt;follow us on twitter&lt;/a&gt;. We will announce every new blog post on JSON Forms there.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We hope to see you soon for the next day!&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block;&quot;&gt;&lt;a href=&quot;https://twitter.com/intent/tweet?source=webclient&amp;amp;text=JSON+Forms+%26%238211%3B+Day+3+%26%238211%3B+Extending+the+UI+Schema&amp;amp;via=eclipsesource&amp;amp;url=http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;&lt;img alt=&quot;Twitter&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/twitter.png&quot; title=&quot;Twitter&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://plus.google.com/share?url=http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;+1&quot;&gt;&lt;img alt=&quot;Google+&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/google_plus.png&quot; title=&quot;Google+&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;http://www.linkedin.com/cws/share?url=http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Share on LinkedIn&quot;&gt;&lt;img alt=&quot;LinkedIn&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/linkedin.png&quot; title=&quot;LinkedIn&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/&amp;amp;t=JSON+Forms+%26%238211%3B+Day+3+%26%238211%3B+Extending+the+UI+Schema&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;&lt;img alt=&quot;Facebook&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/facebook.png&quot; title=&quot;Facebook&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2017/01/11/json-forms-day-3-extending-the-ui-schema/#respond&quot;&gt;Leave a Comment&lt;/a&gt;. Tagged with &lt;a href=&quot;http://eclipsesource.com/blogs/tag/angularjs/&quot; title=&quot;AngularJS Tag&quot;&gt;AngularJS&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emf/&quot; title=&quot;emf Tag&quot;&gt;emf&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfcp/&quot; title=&quot;emfcp Tag&quot;&gt;emfcp&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfforms/&quot; title=&quot;emfforms Tag&quot;&gt;emfforms&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/forms/&quot; title=&quot;Forms Tag&quot;&gt;Forms&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json/&quot; title=&quot;JSON Tag&quot;&gt;JSON&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json-schema/&quot; title=&quot;JSON Schema Tag&quot;&gt;JSON Schema&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/angularjs/&quot; title=&quot;AngularJS Tag&quot;&gt;AngularJS&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emf/&quot; title=&quot;emf Tag&quot;&gt;emf&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfcp/&quot; title=&quot;emfcp Tag&quot;&gt;emfcp&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfforms/&quot; title=&quot;emfforms Tag&quot;&gt;emfforms&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/forms/&quot; title=&quot;Forms Tag&quot;&gt;Forms&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json/&quot; title=&quot;JSON Tag&quot;&gt;JSON&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/json-schema/&quot; title=&quot;JSON Schema Tag&quot;&gt;JSON Schema&lt;/a&gt;&lt;p&gt;&lt;/p&gt;</description>
+	<pubDate>Wed, 11 Jan 2017 09:15:40 +0000</pubDate>
+</item>
+<item>
+	<title>PapyrusUML: First Papyrus IC Research/Academia webinar of 2017</title>
+	<guid isPermaLink="false">http://papyrusuml.wordpress.com/?p=406</guid>
+	<link>https://papyrusuml.wordpress.com/2017/01/10/first-papyrus-ic-researchacademia-webinar-of-2017/</link>
+	<description>&lt;p&gt;If you’ve been following this blog, you already know that I have an &lt;a href=&quot;https://papyrusuml.wordpress.com/2016/02/26/the-papyrus-ic-is-flying/&quot; target=&quot;_blank&quot;&gt;Industry Consortium.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And if you looked at the Papyrus Industry Consortium’s (PIC) website, you also know that it has a Research and Academia Committee!&lt;/p&gt;
+&lt;p&gt;And that committee is known to hold very interesting webinars about various aspects of modeling, open source, and, of course, ME!&lt;/p&gt;
+&lt;p&gt;Well, the first webinar of the year will happen this Friday, January 13th, at 16:00 – 17:00 CET, 15:00 – 16:00 GMT, 10:00 – 11:00 EST.&lt;/p&gt;
+&lt;p&gt;Our first speaker of 2017 is none other than Jordi Cabot, ICREA Research Professor at IN3 (Open University of Catalonia), a well-known member of our community with many years of experience as a researcher in Model Driven Engineering and in open-source software and the driving force behind the &lt;span style=&quot;color: #ff9633;&quot;&gt;MO&lt;/span&gt;deling &lt;span style=&quot;color: #ff9633;&quot;&gt;LA&lt;/span&gt;nguages blog.&lt;/p&gt;
+&lt;p&gt;Jordi will be talking about some of the key factors in the success of open-source software projects. His talk is titled:&lt;/p&gt;
+&lt;p style=&quot;padding-left: 60px;&quot;&gt;&lt;strong&gt;Wanna see your OSS project succeed? Nurture the community&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I hope you will join us for this very interesting talk.&lt;/p&gt;
+&lt;p&gt;You can find the &lt;a href=&quot;https://wiki.polarsys.org/Papyrus_IC/Research_Academia/Webinars&quot; target=&quot;_blank&quot;&gt;connection information in the Papyrus IC wiki&lt;/a&gt;.&lt;/p&gt;&lt;br /&gt;Filed under: &lt;a href=&quot;https://papyrusuml.wordpress.com/category/papyrus-ic/research-and-academia/&quot;&gt;Research and Academia&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/category/uncategorized/&quot;&gt;Uncategorized&lt;/a&gt; Tagged: &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/academia/&quot;&gt;academia&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/community/&quot;&gt;community&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/open-source/&quot;&gt;open-source&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/project/&quot;&gt;project&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/research/&quot;&gt;research&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/webinar/&quot;&gt;webinar&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/papyrusuml.wordpress.com/406/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/papyrusuml.wordpress.com/406/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/godelicious/papyrusuml.wordpress.com/406/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/delicious/papyrusuml.wordpress.com/406/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gofacebook/papyrusuml.wordpress.com/406/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/facebook/papyrusuml.wordpress.com/406/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gotwitter/papyrusuml.wordpress.com/406/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/twitter/papyrusuml.wordpress.com/406/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gostumble/papyrusuml.wordpress.com/406/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/stumble/papyrusuml.wordpress.com/406/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/godigg/papyrusuml.wordpress.com/406/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/digg/papyrusuml.wordpress.com/406/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/goreddit/papyrusuml.wordpress.com/406/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/reddit/papyrusuml.wordpress.com/406/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=papyrusuml.wordpress.com&amp;amp;blog=72365150&amp;amp;post=406&amp;amp;subd=papyrusuml&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Tue, 10 Jan 2017 17:29:33 +0000</pubDate>
+</item>
+<item>
+	<title>Jeremie Bresson: Use the Eclipse Java Development Tools in a Java SE application</title>
+	<guid isPermaLink="true">http://jmini.github.io/blog/2017/2017-01-10_use-eclipse-jdt-in-java-app.html</guid>
+	<link>http://jmini.github.io/blog/2017/2017-01-10_use-eclipse-jdt-in-java-app.html</link>
+	<description>&lt;div class=&quot;paragraph&quot;&gt; 
+ &lt;p&gt;Stephan Herrmann has &lt;a href=&quot;https://objectteams.wordpress.com/2017/01/09/eclipse-neon-2-is-on-maven-central/&quot;&gt;announced&lt;/a&gt; that some libraries of the Eclipse Neon.2 release are now available on &lt;a href=&quot;https://search.maven.org/&quot;&gt;maven central&lt;/a&gt;.&lt;/p&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;imageblock&quot;&gt; 
+ &lt;div class=&quot;content&quot;&gt; 
+  &lt;img alt=&quot;Some eclipse jars are now available the central repository&quot; src=&quot;http://jmini.github.io/blog/2017/2017-01-10_eclipse-jars-on-maven-central.png&quot; /&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;paragraph&quot;&gt; 
+ &lt;p&gt;It is now easy to reuse the piece of Eclipse outside any Eclipse based application. Let me share with you this simple example: &lt;em&gt;use the java code formatter of Eclipse JDT in a simple java main class&lt;/em&gt;.&lt;/p&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;paragraph&quot;&gt; 
+ &lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt;: create a very simple maven project. You will need &lt;a href=&quot;https://search.maven.org/#artifactdetails%7Corg.eclipse.jdt%7Corg.eclipse.jdt.core%7C3.12.2%7Cjar&quot;&gt;org.eclipse.jdt.core&lt;/a&gt; as dependency.&lt;/p&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;listingblock&quot;&gt; 
+ &lt;div class=&quot;title&quot;&gt;
+  Listing 1. Example pom.xml
+ &lt;/div&gt; 
+ &lt;div class=&quot;content&quot;&gt; 
+  &lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+      xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&amp;gt;
+  &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+  &amp;lt;groupId&amp;gt;example&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;java-formatter&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;1.0.0-SNAPSHOT&amp;lt;/version&amp;gt;
+
+  &amp;lt;dependencies&amp;gt;
+    &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.eclipse.jdt&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;org.eclipse.jdt.core&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;3.12.2&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+  &amp;lt;/dependencies&amp;gt;
+&amp;lt;/project&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;paragraph&quot;&gt; 
+ &lt;p&gt;&lt;strong&gt;Step 2&lt;/strong&gt;: write a java class with a main method.&lt;/p&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;listingblock&quot;&gt; 
+ &lt;div class=&quot;title&quot;&gt;
+  Listing 2. Example main class
+ &lt;/div&gt; 
+ &lt;div class=&quot;content&quot;&gt; 
+  &lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;import java.util.Properties;
+
+import org.eclipse.jdt.core.JavaCore;
+import org.eclipse.jdt.core.ToolFactory;
+import org.eclipse.jdt.core.formatter.CodeFormatter;
+import org.eclipse.jdt.internal.compiler.impl.CompilerOptions;
+import org.eclipse.jface.text.BadLocationException;
+import org.eclipse.jface.text.Document;
+import org.eclipse.jface.text.IDocument;
+import org.eclipse.text.edits.TextEdit;
+
+public class MainFormatter {
+
+  public static void main(String[] args) {
+    String result;
+
+    String javaCode = &quot;public class MyClass{ &quot;
+                        + &quot;public static void main(String[] args) { &quot;
+                        + &quot;System.out.println(\&quot;Hello World\&quot;);&quot;
+                        + &quot; }&quot;
+                        + &quot; }&quot;;
+
+    Properties prefs = new Properties();
+    prefs.setProperty(JavaCore.COMPILER_SOURCE, CompilerOptions.VERSION_1_8);
+    prefs.setProperty(JavaCore.COMPILER_COMPLIANCE, CompilerOptions.VERSION_1_8);
+    prefs.setProperty(JavaCore.COMPILER_CODEGEN_TARGET_PLATFORM, CompilerOptions.VERSION_1_8);
+
+    CodeFormatter codeFormatter = ToolFactory.createCodeFormatter(prefs);
+    IDocument doc = new Document(javaCode);
+    try {
+      TextEdit edit = codeFormatter.format(CodeFormatter.K_COMPILATION_UNIT | CodeFormatter.F_INCLUDE_COMMENTS,
+                                             javaCode, 0, javaCode.length(), 0, null);
+      if (edit != null) {
+        edit.apply(doc);
+        result = doc.get();
+      }
+      else {
+        result = javaCode;
+      }
+    }
+    catch (BadLocationException e) {
+      throw new RuntimeException(e);
+    }
+
+    System.out.println(result);
+  }
+}&lt;/code&gt;&lt;/pre&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;paragraph&quot;&gt; 
+ &lt;p&gt;&lt;strong&gt;Step 3&lt;/strong&gt;: there is no step 3! You can just run your code in your IDE or from the command line using maven to compute your classpath.&lt;/p&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;imageblock&quot;&gt; 
+ &lt;div class=&quot;content&quot;&gt; 
+  &lt;img alt=&quot;Console output&quot; src=&quot;http://jmini.github.io/blog/2017/2017-01-10_console.png&quot; /&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;div class=&quot;paragraph&quot;&gt; 
+ &lt;p&gt;The code used in this example is a simplification of what you can find in another great open-source project: &lt;a href=&quot;https://github.com/forge/roaster&quot;&gt;JBoss Forge Roaster&lt;/a&gt;.&lt;/p&gt; 
+&lt;/div&gt;</description>
+	<pubDate>Mon, 09 Jan 2017 23:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Stephan Herrmann: Eclipse Neon.2 is on Maven Central</title>
+	<guid isPermaLink="false">http://objectteams.wordpress.com/?p=324</guid>
+	<link>https://objectteams.wordpress.com/2017/01/09/eclipse-neon-2-is-on-maven-central/</link>
+	<description>&lt;p&gt;It’s done, finally!&lt;/p&gt;
+&lt;h3&gt;Bidding farewell to my pet peeve&lt;/h3&gt;
+&lt;p&gt;In my job at &lt;a href=&quot;https://www.gk-software.com/en/&quot; target=&quot;_blank&quot;&gt;GK Software&lt;/a&gt; I have the pleasure of developing technology based on Eclipse. But those colleagues consuming my technology work on software that has no direct connection to Eclipse nor OSGi. Their build technology of choice is Maven (without tycho that is). So whenever their build touches my technology we are facing a “challenge”. It doesn’t make a big difference if they are just invoking a code generator built using &lt;a href=&quot;https://www.eclipse.org/Xtext/&quot;&gt;Xtext&lt;/a&gt; etc or whether some Eclipse technology should actually be included in their application runtime.&lt;/p&gt;
+&lt;p&gt;Among many troubles, I recall one situation that really opened my eyes: one particular build had been running successfully for some time, until one day it was fubar. One Eclipse artifact could no longer be resolved. Followed long nights of searching why that artifact may have disappeared, but we reassured ourselves, nothing had disappeared. Quite to the contrary somewhere on the wide internet (Maven Central to be precise) a &lt;strong&gt;new&lt;/strong&gt; artifact had appeared. So what? Well, that artifact was the same that we also had on our internal servers. Well, if it’s the same, what’s the buzz? It turned out it had a &lt;em&gt;one-char difference&lt;/em&gt; in its version: instead of 1.2.3.v20140815 its version was 1.2.3-v20140815. Yes take a close look, there is a difference. Bottom line, with both almost-identical versions available, Maven couldn’t figure out what to do, maybe each was considered as worse than the other, to the effect that Maven simply failed to use &lt;em&gt;either&lt;/em&gt;. Go figure.&lt;/p&gt;
+&lt;p&gt;More stories like this and I realized that relying on Eclipse artifacts in Maven builds was always at the mercy of some volunteers, who typically don’t have a long-term relationship to Eclipse, who filled in a major gap by uploading individual Eclipse artifacts to Maven Central (thanks to you volunteers, please don’t take it personally: I’m happy that your work is no longer needed). Anybody who has ever studied the differences between Maven and OSGi (wrt dependencies and building that is) will immediately see that there are many possible ways to represent Eclipse artifacts (OSGi bundles) in a Maven pom. The resulting “diversity” was one of my pet peeves in my job.&lt;/p&gt;
+&lt;p&gt;At this point I decided to be the next volunteer &lt;del&gt;who would screw up other people’s builds&lt;/del&gt; who would collaborate with the powers that be at Eclipse.org to produce the official uploads to Maven Central.&lt;/p&gt;
+&lt;p&gt;As of today, I can report that this dream has become reality, all relevant artifacts of Neon.2 that are produced by the &lt;a href=&quot;https://www.eclipse.org/eclipse/&quot;&gt;Eclipse Project&lt;/a&gt;, are now “officially” available from Maven Central.&lt;/p&gt;
+&lt;h3&gt;Bridging between universes&lt;/h3&gt;
+&lt;p&gt;I should like to report some details of how our artifacts are &lt;strong&gt;mapped into the Maven world&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The main tool in this endeavour is the &lt;a href=&quot;https://wiki.eclipse.org/CBI/aggregator&quot;&gt;CBI aggregator&lt;/a&gt;, a model based tool for transforming p2 repositories in various ways. One of its capabilities is to create a Maven repository (a dual use repo actually, but the p2 side of this is immaterial to this story). That tool does a great job of extracting meta data from the p2 repo in order to create “meaningful” pom files, the key feature being: it copies all dependency information, which is originally authored in MANIFEST.MF, into corresponding declarations in the pom file.&lt;/p&gt;
+&lt;p&gt;Still a few things had to be settled, either by improving the tool, by fine tuning the input to the tool, or by some steps of post-processing the resulting Maven repo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Group IDs&lt;/strong&gt;&lt;br /&gt;
+While OSGi artifacts only have a single qualified Bundle-SymbolicName, Maven requires a two-part name: groupId x artifactId. It was easy to agree on using the full symbolic name for the artifactId, but what should the groups be? We settled on these three groups for the Eclipse Project:&lt;p&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;org.eclipse.platform&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;org.eclipse.jdt&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;org.eclipse.pde&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Version numbers&lt;/strong&gt;&lt;br /&gt;
+In Maven land, release versions have three segments, in OSGi we maintain a forth segment (qualifier) also for releases. To play by Maven rules, we decided to use &lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;three-part versions&lt;/strong&gt;&lt;/span&gt; for our uploads to Maven Central. This emphasizes the strategy to only publish releases, for which the first three parts of the version are required to be unique.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3rd party dependencies&lt;/strong&gt;&lt;br /&gt;
+All non-Eclipse artifacts that we depend on should be referenced by their proper coordinates in Maven land. By default, the CBI aggregator assigns all artifacts to the synthetic group p2.osgi.bundle, but if s.o. depends on p2.osgi.bundle:org.junit this doesn’t make much sense. In particular, it must be avoided that projects consuming Eclipse artifacts will get the same 3rd party library under two different names (perhaps in different versions?). We identified 16 such libraries, and their &lt;span style=&quot;color: #008000;&quot;&gt;&lt;a href=&quot;https://wiki.eclipse.org/Platform-releng/Publish_To_Maven_Central#Run_the_aggregator&quot; style=&quot;color: #008000;&quot;&gt;proper coordinates&lt;/a&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Source artifacts&lt;/strong&gt;&lt;br /&gt;
+Eclipse plug-ins have their source code in corresponding .source plug-ins. Maven has a similar convention, just using a “classifier” instead of appending to the artifact name. In Maven we &lt;span style=&quot;color: #008000;&quot;&gt;conform to their convention&lt;/span&gt;, so that tools like &lt;a href=&quot;https://www.eclipse.org/m2e/&quot;&gt;m2e&lt;/a&gt; can correctly pick up the source code from any dependencies.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Other meta data&lt;/strong&gt;&lt;br /&gt;
+Followed a hunt for project url, scm coordinates, artifact descriptions and related data. Much of this could be retrieved from our MANIFEST.MF files, some information is currently mapped using a static, manually maintained mapping. Other information like licences and organization are fully static during this process. In the end all was approved by the &lt;span style=&quot;color: #008000;&quot;&gt;&lt;a href=&quot;http://central.sonatype.org/pages/requirements.html&quot; style=&quot;color: #008000;&quot;&gt;validation on OSSRH servers&lt;/a&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you want to browse the resulting wealth, you may start at&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/platform/&quot;&gt;https://repo1.maven.org/maven2/org/eclipse/platform/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/jdt/&quot;&gt;https://repo1.maven.org/maven2/org/eclipse/jdt/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/pde/&quot;&gt;https://repo1.maven.org/maven2/org/eclipse/pde/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Everything with fully qualified artifact names in these groups (and date of 2017-01-07 or newer) should be from the new, “official” upload.&lt;/p&gt;
+&lt;h3&gt;This is just the beginning&lt;/h3&gt;
+&lt;p&gt;The bug on which all this has been booked is &lt;a href=&quot;https://bugs.eclipse.org/484004&quot;&gt;&lt;del&gt;Bug 484004&lt;/del&gt;: Start publishing Eclipse platform artifacts to Maven central&lt;/a&gt;. See the word “Start”?&lt;/p&gt;
+&lt;p&gt;To follow-up tasks are already on the board:&lt;/p&gt;
+&lt;p&gt;(1) Migrate all the various scripts, tools, and models to the proper git repo of our releng project. At the end of the day, this process of transformation and upload should become a routine operation to be invoked by our favourite build meisters.&lt;/p&gt;
+&lt;p&gt;(2) Fix any quirks in the generated pom files. E.g., we already know that the process did not handle fragments in an optimal way. As a result, consuming SWT from the new upload is not straight forward.&lt;/p&gt;
+&lt;p&gt;Both issues should be handled in or off &lt;a class=&quot;bz_bug_link            bz_status_NEW &quot; href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=510072&quot; title=&quot;NEW - Scripts &amp;amp; tool for publishing to Maven Central should migrate to releng git&quot;&gt;bug 510072&lt;/a&gt;, in the hope, that when we publish Neon.3 the new, “official” Maven coordinates of Eclipse artifacts will be even fit all all real world use. So: please test and report in the bug any problems you might find.&lt;/p&gt;
+&lt;p&gt;(3) I was careful to say “Eclipse Project”. We don’t yet have the magic wand to apply this to literally all artifacts produced in the Eclipse community. Perhaps s.o. will volunteer to apply the approach to everything from the &lt;a href=&quot;https://wiki.eclipse.org/Simultaneous_Release&quot;&gt;Simultaneous Release&lt;/a&gt;? If we can publish 300+ artifacts, we can also publish 7000+, can’t we? &lt;img alt=&quot;🙂&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;happy building!&lt;/p&gt;&lt;br /&gt;  &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/objectteams.wordpress.com/324/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/objectteams.wordpress.com/324/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=objectteams.wordpress.com&amp;amp;blog=52525906&amp;amp;post=324&amp;amp;subd=objectteams&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Mon, 09 Jan 2017 22:21:52 +0000</pubDate>
+</item>
+<item>
 	<title>Maximilian and Jonas: EMF Forms 1.11.0 Feature: Grid Table and more</title>
 	<guid isPermaLink="false">http://eclipsesource.com/blogs/?p=27535</guid>
 	<link>http://eclipsesource.com/blogs/2017/01/02/emf-forms-1-11-0-feature-grid-table-and-more/</link>
@@ -92,7 +491,7 @@
 &lt;p&gt;Related to the AMQP 1.0 protocol there are the Vert.x &lt;a href=&quot;https://github.com/vert-x3/vertx-proton&quot;&gt;Proton&lt;/a&gt; and the &lt;a href=&quot;https://github.com/vert-x3/vertx-amqp-bridge&quot;&gt;AMQP bridge&lt;/a&gt; components. The first one provides a thin wrapper around the &lt;a href=&quot;http://qpid.apache.org/&quot;&gt;Apache Qpid&lt;/a&gt; Proton engine and can be used for interacting with AMQP based messaging systems as clients (sender and receiver) but even developing a server. The last one provides a bridge between the protocol and the Vert.x Event Bus mostly used for communication between deployed Vert.x verticles. Thanks to this bridge, verticles can interact with AMQP components in a simple way.&lt;/p&gt;
 &lt;p&gt;Last but not least, the Vert.x &lt;a href=&quot;https://github.com/vert-x3/vertx-kafka-client&quot;&gt;Kafka client&lt;/a&gt; component which provides access to Apache Kafka for sending and consuming messages from topics and related partitions. A lot of IoT scenarios leverage on Apache Kafka in order to have an ingestion system capable of handling million messages per second.&lt;/p&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;The current Vert.x code base provides quite interesting components for developing IoT solutions which are already available in the current 3.3.3 version (see Vert.x Proton and AMQP bridge) and that will be available soon in the future 3.3.4 version (see MQTT server and Kafka client). Of course, you don’t need to wait for their official release because, even if under development, you can already adopt these components and provide your feedback to the community.&lt;/p&gt;
+&lt;p&gt;The current Vert.x code base provides quite interesting components for developing IoT solutions which are already available in the current 3.3.3 version (see Vert.x Proton and AMQP bridge) and that will be available soon in the future 3.4.0 version (see MQTT server and Kafka client). Of course, you don’t need to wait for their official release because, even if under development, you can already adopt these components and provide your feedback to the community.&lt;/p&gt;
 &lt;p&gt;This ecosystem will grow in the future and Vert.x will be a leading actor in the IoT applications world based on a microservices architecture !&lt;/p&gt;
 &lt;/article&gt;</description>
 	<pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
@@ -296,23 +695,6 @@
 	<pubDate>Thu, 22 Dec 2016 13:44:19 +0000</pubDate>
 </item>
 <item>
-	<title>Maximilian and Jonas: EMF Forms and EMF Client Platform 1.11.0 released!</title>
-	<guid isPermaLink="false">http://eclipsesource.com/blogs/?p=27538</guid>
-	<link>http://eclipsesource.com/blogs/2016/12/22/emf-forms-and-emf-client-platform-1-11-0-released/</link>
-	<description>&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We are happy to announce that together with Neon.2, we have released &lt;/span&gt;&lt;a href=&quot;http://eclipse.org/ecp/emfforms&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;EMF Forms&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; and &lt;/span&gt;&lt;a href=&quot;http://eclipse.org/ecp&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;EMF Client Platform&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; 1.11.0! &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We want to thank our continuously active team of &lt;/span&gt;&lt;b&gt;12 contributors &lt;/b&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;(&lt;/span&gt;&lt;b&gt;36 contributors&lt;/b&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; over all).&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;EMF Forms is a framework focused on the creation of form-based UIs. EMF Client Platform is designed to support the development of applications based on an EMF data model. If you are not yet familiar with EMF Forms, please refer to &lt;/span&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/tutorials/getting-started-with-EMF-Forms/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;this tutorial&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; for a introduction.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Both of these frameworks are part of Eclipse Modeling Tools Neon.2, but you can also find the new release on our download pages:&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;a href=&quot;http://eclipse.org/ecp/download.html&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Download EMF Client Platform&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;a href=&quot;http://eclipse.org/ecp/emfforms/download.html&quot;&gt;Download EMF Forms&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Please note, that we have began work on EMF Forms / ECP 2.0.0 in parallel to the 1.x development stream. We plan a 1.12.0 release along with Neon.3. Afterwards, we plan to focus on the 2.0.0 release stream. However, users do not have to worry too much about API breaks. There are two major changes that we wish to apply with 2.0.0. First, we plan to remove API, which is already marked as deprecated. So, if you still use any deprecated API, now is a good time to start refactoring here. Second, we will refactor the way “domain model references” are stored in the model. This will mainly allow us to bind to new data models. For this change, we plan to provide a migration for existing view models, so this change should be seamless for users of the framework.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As always, we will also blog about new features of the EMF Forms / ECP 1.11.0 release in the upcoming weeks! Please follow this blog or follow us on &lt;a href=&quot;https://twitter.com/EclipseSourceM&quot;&gt;twitter&lt;/a&gt; to get notified about the new posts.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block;&quot;&gt;&lt;a href=&quot;https://twitter.com/intent/tweet?source=webclient&amp;amp;text=EMF+Forms+and+EMF+Client+Platform+1.11.0+released%21&amp;amp;via=eclipsesource&amp;amp;url=http://eclipsesource.com/blogs/2016/12/22/emf-forms-and-emf-client-platform-1-11-0-released/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Share on Twitter&quot;&gt;&lt;img alt=&quot;Twitter&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/twitter.png&quot; title=&quot;Twitter&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://plus.google.com/share?url=http://eclipsesource.com/blogs/2016/12/22/emf-forms-and-emf-client-platform-1-11-0-released/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;+1&quot;&gt;&lt;img alt=&quot;Google+&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/google_plus.png&quot; title=&quot;Google+&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;http://www.linkedin.com/cws/share?url=http://eclipsesource.com/blogs/2016/12/22/emf-forms-and-emf-client-platform-1-11-0-released/&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Share on LinkedIn&quot;&gt;&lt;img alt=&quot;LinkedIn&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/linkedin.png&quot; title=&quot;LinkedIn&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=http://eclipsesource.com/blogs/2016/12/22/emf-forms-and-emf-client-platform-1-11-0-released/&amp;amp;t=EMF+Forms+and+EMF+Client+Platform+1.11.0+released%21&quot; style=&quot;margin-right: 5px;&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;&lt;img alt=&quot;Facebook&quot; src=&quot;http://eclipsesource.com/blogs/wp-content/plugins/custom-about-author/images/social_media/facebook.png&quot; title=&quot;Facebook&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/2016/12/22/emf-forms-and-emf-client-platform-1-11-0-released/#respond&quot;&gt;Leave a Comment&lt;/a&gt;. Tagged with &lt;a href=&quot;http://eclipsesource.com/blogs/tag/eclipse/&quot; title=&quot;eclipse Tag&quot;&gt;eclipse&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emf/&quot; title=&quot;emf Tag&quot;&gt;emf&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfcp/&quot; title=&quot;emfcp Tag&quot;&gt;emfcp&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfforms/&quot; title=&quot;emfforms Tag&quot;&gt;emfforms&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/eclipse/&quot; title=&quot;eclipse Tag&quot;&gt;eclipse&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emf/&quot; title=&quot;emf Tag&quot;&gt;emf&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfcp/&quot; title=&quot;emfcp Tag&quot;&gt;emfcp&lt;/a&gt;, &lt;a href=&quot;http://eclipsesource.com/blogs/tag/emfforms/&quot; title=&quot;emfforms Tag&quot;&gt;emfforms&lt;/a&gt;&lt;p&gt;&lt;/p&gt;</description>
-	<pubDate>Thu, 22 Dec 2016 13:30:22 +0000</pubDate>
-</item>
-<item>
 	<title>VIATRA: VIATRA 1.5 released</title>
 	<guid isPermaLink="false">5614faafe4b03f677dc3822b:56153118e4b022593e35e24b:585babffb8a79bc51010beb2</guid>
 	<link>https://viatra.net/news/2016/12/viatra-15-released</link>
@@ -418,158 +800,6 @@
 &lt;/ul&gt;
 &lt;p&gt; &lt;/p&gt;&lt;br /&gt;Filed under: &lt;a href=&quot;https://papyrusuml.wordpress.com/category/uml/&quot;&gt;UML&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/category/uncategorized/&quot;&gt;Uncategorized&lt;/a&gt; Tagged: &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/article/&quot;&gt;article&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/papyrus-im/&quot;&gt;Papyrus-IM&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/papyrus-rt-2/&quot;&gt;papyrus-rt&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/review/&quot;&gt;review&lt;/a&gt;, &lt;a href=&quot;https://papyrusuml.wordpress.com/tag/se-trends/&quot;&gt;SE-Trends&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/papyrusuml.wordpress.com/353/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/papyrusuml.wordpress.com/353/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/godelicious/papyrusuml.wordpress.com/353/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/delicious/papyrusuml.wordpress.com/353/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gofacebook/papyrusuml.wordpress.com/353/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/facebook/papyrusuml.wordpress.com/353/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gotwitter/papyrusuml.wordpress.com/353/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/twitter/papyrusuml.wordpress.com/353/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/gostumble/papyrusuml.wordpress.com/353/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/stumble/papyrusuml.wordpress.com/353/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/godigg/papyrusuml.wordpress.com/353/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/digg/papyrusuml.wordpress.com/353/&quot; /&gt;&lt;/a&gt; &lt;a href=&quot;http://feeds.wordpress.com/1.0/goreddit/papyrusuml.wordpress.com/353/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/reddit/papyrusuml.wordpress.com/353/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=papyrusuml.wordpress.com&amp;amp;blog=72365150&amp;amp;post=353&amp;amp;subd=papyrusuml&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;</description>
 	<pubDate>Tue, 20 Dec 2016 13:50:44 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Announcements: Eclipse Newsletter | Ready, Set… 2017!</title>
-	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/X3cTPvpmEvc/</guid>
-	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/X3cTPvpmEvc/</link>
-	<description>2017. It's already here. Here are six great articles about some of the things you can expect to see in the new year!&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/X3cTPvpmEvc&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Tue, 20 Dec 2016 10:50:00 +0000</pubDate>
-</item>
-<item>
-	<title>typefox.io: Getting Closer to Xtext 2.11: Beta 2</title>
-	<guid isPermaLink="false">http://typefox.io/?p=13979</guid>
-	<link>http://typefox.io/getting-closer-to-xtext-2-11-beta-2</link>
-	<description>&lt;div class=&quot;fusion-fullwidth fullwidth-box nonhundred-percent-fullwidth&quot; style=&quot;background-color: rgba(255,255,255,0); background-position: center center; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;&quot;&gt;&lt;div class=&quot;fusion-builder-row fusion-row &quot;&gt;&lt;div class=&quot;fusion-layout-column fusion_builder_column fusion_builder_column_1_1  fusion-one-full fusion-column-first fusion-column-last 1_1&quot; style=&quot;margin-top: 0px; margin-bottom: 0px;&quot;&gt;
-			&lt;div class=&quot;fusion-column-wrapper&quot;&gt;
-				&lt;p&gt;A second milestone towards Xtext 2.11 named &lt;em&gt;Beta 2&lt;/em&gt; has been published today! The feature set is largely at the same state as with the &lt;a href=&quot;http://typefox.io/xtext-2-11-beta-1-is-here&quot;&gt;Beta 1&lt;/a&gt; published on October 21st. The main difference is that we spent a lot of effort in the build system for the &lt;a href=&quot;http://typefox.io/xtext-core-less-is-more&quot;&gt;new repository structure&lt;/a&gt;, allowing us to publish both for Eclipse and for Maven in a clean and consistent way. This means that you can use this new milestone also with Gradle or Maven projects, e.g. in applications built on the &lt;a href=&quot;https://www.eclipse.org/Xtext/documentation/330_web_support.html&quot;&gt;Xtext web integration&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Eclipse update site: &lt;a href=&quot;http://download.eclipse.org/modeling/tmf/xtext/updates/milestones/head/S201612190948/&quot;&gt;http://download.eclipse.org/modeling/tmf/xtext/updates/milestones/head/S201612190948/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Maven version: &lt;code&gt;2.11.0.beta2&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We would like to encourage all Xtext users to check this milestone version with their applications and to give us feedback. Now there’s still time to improve things before 2.11.0 is released (January 24th).&lt;/p&gt;
-&lt;h3&gt;Using the Cutting Edge&lt;/h3&gt;
-&lt;p&gt;As usual you can find nightly built snapshots on the &lt;a href=&quot;http://download.eclipse.org/modeling/tmf/xtext/updates/composite/latest/&quot;&gt;Xtext Latest&lt;/a&gt; update site or on &lt;a href=&quot;https://oss.sonatype.org/content/repositories/snapshots&quot;&gt;Sonatype Snapshots&lt;/a&gt;. However, if you want to apply even more up-to-date versions to your application, all subprojects of Xtext now offer their build artifacts in local repositories on our build server:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;xtext-lib: &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-lib/job/master/lastStableBuild/artifact/build/maven-repository/&quot;&gt;Maven&lt;/a&gt;, &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-lib/job/master/lastStableBuild/artifact/build/p2-repository/&quot;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;xtext-core: &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-core/job/master/lastStableBuild/artifact/build/maven-repository/&quot;&gt;Maven&lt;/a&gt;, &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-core/job/master/lastStableBuild/artifact/build/p2-repository/&quot;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;xtext-extras: &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-extras/job/master/lastStableBuild/artifact/build/maven-repository/&quot;&gt;Maven&lt;/a&gt;, &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-extras/job/master/lastStableBuild/artifact/build/p2-repository/&quot;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;xtext-eclipse: &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-eclipse/job/master/lastStableBuild/artifact/build/p2-repository/&quot;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;xtext-web: &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-web/job/master/lastStableBuild/artifact/build/maven-repository/&quot;&gt;Maven&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;xtext-maven: &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-maven/job/master/lastStableBuild/artifact/build/maven-repository/&quot;&gt;Maven&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;xtext-xtend: &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-xtend/job/master/lastStableBuild/artifact/build/maven-repository/&quot;&gt;Maven&lt;/a&gt;, &lt;a href=&quot;http://services.typefox.io/open-source/jenkins/job/xtext-xtend/job/master/lastStableBuild/artifact/build/p2-repository/&quot;&gt;Eclipse&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;These builds are triggered automatically when changes are pushed to the corresponding GitHub repositories. Please note that while the nightly built snapshots have signed JARs, the cutting edge builds are not signed.&lt;/p&gt;
-&lt;div class=&quot;fusion-clearfix&quot;&gt;&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-	<pubDate>Tue, 20 Dec 2016 08:04:48 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Announcements: Eclipse Converge | Program Announced</title>
-	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/EJ0CCKaOk-4/program-ready</guid>
-	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/EJ0CCKaOk-4/program-ready</link>
-	<description>Program Announced for Eclipse Converge 2017! Early-bird registration is open. Get $120 off the conference pass.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/EJ0CCKaOk-4&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Tue, 20 Dec 2016 07:30:00 +0000</pubDate>
-</item>
-<item>
-	<title>Cedric Brun: Graphical Modeling from 2016 to 2017: Better, Faster, Stronger</title>
-	<guid isPermaLink="false">http://cedric.brun.io/eclipse/modeling-2016-2017-better-faster-stronger</guid>
-	<link>http://cedric.brun.io/eclipse/modeling-2016-2017-better-faster-stronger/</link>
-	<description>&lt;p&gt;At Obeo, we believe that modeling is the right way to help IT and industry engineers collaborate efficiently on the design of their smart products. Our innovative approach consists of building specific modeling tools that completely suit users’ business domains. Modeling is a means to an end: by using modeling technologies we make sure that such a tool can be defined faster, as well as deployed and maintained better.&lt;/p&gt;
-
-&lt;p&gt;To achieve this goal, we develop highly customizable open source software, such as &lt;a href=&quot;http://www.eclipse.org/sirius/&quot; target=&quot;_blank&quot;&gt;Eclipse Sirius&lt;/a&gt;. We consider that a modeling tool must be adaptable, flexible, and user-friendly. This year again, we worked hard to focus on that!&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://cedric.brun.io/images/blog/2016-2017/1capture.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you may know, Sirius is the easiest way to get your own modeling tool and to do it rapidly. Indeed, it dramatically reduces the time spent on creating domain-specific modeling workbenches thanks to an interpretation mode that allows very short feedback-loops. In 2016, we invested time in the Eclipse Ecore Tools project to facilitate the definition of modeling languages by providing a very intuitive and powerful Ecore graphical editor.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://cedric.brun.io/images/blog/2016-2017/2capture.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s been three years since Sirius was made open source and the community is growing every year. A few weeks ago, part of this community gathered for the second edition of &lt;a href=&quot;http://www.siriuscon.org/&quot; target=&quot;_blank&quot;&gt;SiriusCon&lt;/a&gt; in Paris. More than 100 attendees coming from more than 10 different countries participated in this international conference on graphical modeling. If that is not proof that Sirius is a worldwide technology, we don’t know what is!&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://cedric.brun.io/images/blog/2016-2017/3capture.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;At SiriusCon, we had the opportunity to present one of the latest key features of Sirius: &lt;a href=&quot;http://www.eclipse.org/sirius/whatsnew/whatsnew4-1.html&quot;&gt;the properties view&lt;/a&gt;. It turned out that with all the improvements Sirius brings to the specification of the modeling view, the bottleneck was in the definition of the properties view to be linked to each graphical element. The Obeo team addressed that problem.&lt;/p&gt;
-
-&lt;p&gt;Now, Sirius provides an integrated way to define properties views in the same way the user is used to defining them in other parts of the designer: no need for coding - it is dynamic and query based. In addition, with &lt;a href=&quot;http://www.eclipse.org/sirius/download.html&quot; target=&quot;_blank&quot;&gt;Sirius 4.1&lt;/a&gt;, the user is now able to specify exactly how the properties view should be represented.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://cedric.brun.io/images/blog/2016-2017/4capture.png&quot;&gt;&lt;img src=&quot;http://cedric.brun.io/images/blog/2016-2017/4capture.png&quot; /&gt;&lt;/a&gt;    
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Sirius 4.1 has default rules based on the type of the elements defined in the metamodel. For example, if the user has defined a string attribute in his metamodel, it will be automatically represented by a text widget; a boolean will be represented by a checkbox, and so on. If the default properties view does not fit the user’s needs, no problem: it can be customized.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://cedric.brun.io/images/blog/2016-2017/5capture.png&quot;&gt;&lt;img src=&quot;http://cedric.brun.io/images/blog/2016-2017/5capture.png&quot; /&gt;&lt;/a&gt;    
-    
-&lt;/figure&gt;
-
-&lt;p&gt;In 2017, we want to go further building on the same fundamentals. We will focus on technologies that are &lt;strong&gt;real-world ready, adaptable, and give instant feedback&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;We’ve been working on the codebase for months already, but next year will see a nice scalability offspring: a core runtime that can scale any number of diagrams or their size while keeping everything consistent like it currently does today. And that’s only under the hood, in a more visible way we’ll hunt for every break a user might encounter in the workflow of using a modeling tool. Here is an example when the user ends up trying to set up diagrams and models while not being the modeling perspective:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://cedric.brun.io/images/blog/2016-2017/6capture.png&quot;&gt;&lt;img src=&quot;http://cedric.brun.io/images/blog/2016-2017/6capture.png&quot; /&gt;&lt;/a&gt;    
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The model content or diagrams are not visible in the package explorer yet, the Eclipse IDE doesn’t have an editor for &lt;code class=&quot;highlighter-rouge&quot;&gt;.aird&lt;/code&gt; files, and double clicking it will not help. We plan to address this next year by providing a default editor for &lt;code class=&quot;highlighter-rouge&quot;&gt;.aird&lt;/code&gt; files.&lt;/p&gt;
-
-&lt;p&gt;This editor gives us a whole new dimension to present your tooling features and is the starting point to a project that will grow during the next few years: making the tooling aware of the process to achieve better usability.&lt;/p&gt;
-
-&lt;p&gt;Hear me well, the word “aware” is picked with care and “process driven” is banned in this context. In the end the user gets to decide and the tool should never get in the way, but by making the tool aware of the process or methodology we can make it more helpful. This will first be translated by the integration of the Activity Explorer which got contributed to Amalgam by Thales last year. This allows anyone to define the process activities without writing a single line of code, in the very same way you can currently define diagrams, tables or the properties view, right into the &lt;code class=&quot;highlighter-rouge&quot;&gt;.odesign&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://cedric.brun.io/images/blog/2016-2017/7capture.png&quot;&gt;&lt;img src=&quot;http://cedric.brun.io/images/blog/2016-2017/7capture.png&quot; /&gt;&lt;/a&gt;    
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Other improvements especially focused on the diagrams are in the works. Here is a mockup of a new mechanism to enrich existing diagram editors, you can think of it as “decorators on steroids”. Follow this &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=506259&quot; target=&quot;_blank&quot;&gt;bug&lt;/a&gt; if you are interested.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://cedric.brun.io/images/blog/2016-2017/8capture.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We are in a continuous evolution. We strive to continually improve the user experience and to streamline the complete model environment building process. This means that we have our hands in many Eclipse projects, from Ecore Tools, EMF Compare, Acceleo, Amalgam, EEF to Sirius and improve each of those. We are building various technologies independently while making sure they integrate seamlessly in the final product.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;http://cedric.brun.io/images/blog/2016-2017/9capture.png&quot;&gt;&lt;img src=&quot;http://cedric.brun.io/images/blog/2016-2017/9capture.png&quot; /&gt;&lt;/a&gt;    
-    
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://polarsys.org/capella/&quot; target=&quot;_blank&quot;&gt;Capella&lt;/a&gt;, one of the solutions provided by Eclipse PolarSys Working Group, is one example of a product aggregating such technologies. It is already a field-proven Model-Based Systems Engineering (MBSE) workbench.&lt;/p&gt;
-
-&lt;p&gt;Capella was developed by Thales to help engineers formalize system specifications and master their architectural design. It is sustainable and adaptable and has already been successfully deployed in a wide variety of industrial contexts (aerospace, communication, transportation, etc.). This is a modeling environment focused on a domain tooling a methodology, based on many of the technologies mentioned before. It is 100% open source. &lt;a href=&quot;https://polarsys.org/capella/&quot; target=&quot;_blank&quot;&gt;Check out what can be done with it!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Is modeling in 2017 going better, faster, stronger? Challenge accepted! The Obeo team is up to the task! We will do our possible to reach a new level and deliver cutting edge modeling tools.&lt;/p&gt;
-
-&lt;p&gt;To achieve anything we need the support of our enthusiastic community. We know that in 2017 we will be able to rely on the Eclipse users as we have always done. We want to get closer to the users and receive fine-grained feedback to improve our technologies even more. We are currently working on a new online (and IRL!) way to deal with that… but you will have to stay tuned to get more information. Keep your eyes peeled for the upcoming &lt;a href=&quot;http://www.siriuscon.org/&quot; target=&quot;_blank&quot;&gt;SiriusCon&lt;/a&gt;, it’s the best place to interact with us!&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://cedric.brun.io/eclipse/modeling-2016-2017-better-faster-stronger/&quot;&gt;Graphical Modeling from 2016 to 2017: Better, Faster, Stronger&lt;/a&gt; was originally published by Cédric Brun at &lt;a href=&quot;http://cedric.brun.io&quot;&gt;CTO @ Obeo&lt;/a&gt; on December 20, 2016.&lt;/p&gt;</description>
-	<pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
-	<author>cedric.brun@obeo.fr (Cédric Brun)</author>
-</item>
-<item>
-	<title>Kaloyan Raev: Making the Text Editor to be the Default One for All Unknown Files in Eclipse</title>
-	<guid isPermaLink="false">tag:blogger.com,1999:blog-2621158270780051626.post-4907786356117469284</guid>
-	<link>http://kaloyanraev.blogspot.com/2015/04/making-text-editor-to-be-default-one.html</link>
-	<description>&lt;i&gt;&lt;b&gt;NOTE.&lt;/b&gt; &lt;span style=&quot;background-color: #fefdfa; color: #333333; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 15px; text-align: justify;&quot;&gt;The functionality of the Default Text Editor plugin has been implemented in the Eclipse Platform with the Neon release. Check the &lt;/span&gt;&lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.6/platform.php#text-editor-selection-strategy&quot; rel=&quot;nofollow&quot; style=&quot;background-color: #fefdfa; color: #7d181e; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 15px; text-align: justify; text-decoration: none;&quot;&gt;release notes&lt;/a&gt;&lt;span style=&quot;background-color: #fefdfa; color: #333333; font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 15px; text-align: justify;&quot;&gt; for details.&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&lt;br /&gt;Eclipse users usually work with many different file types. Some of the file types may be opened by default in an external editor instead of in the Eclipse workbench. This happens if Eclipse has no editor available to handle that particular file type, but there is one installed in the operating system. In such case Eclipse assumes that it is better for the user to have the file opened in the external system editor.&lt;br /&gt;&lt;br /&gt;Lots of users are quite annoyed by this behavior, especially when it comes to text-based files. They would prefer to have the file opened in the plain text editor of Eclipse instead of switching the context to the external program. Unfortunately, there is no easy way to change this in the preference settings. It's possible to associate a specific file extension with the plain text editor, but this must be done separately for every file extensions. There is no way to say &quot;all text files of unknown type should open in the text editor&quot;.&lt;br /&gt;&lt;br /&gt;Here comes the &lt;a href=&quot;https://github.com/eclipselabs/default-text-editor&quot;&gt;Default Text Editor&lt;/a&gt; plugin. It takes advantage of the &lt;a href=&quot;http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fextension-points%2Forg_eclipse_ui_ide_editorAssociationOverride.html&quot;&gt;Editor Association Override&lt;/a&gt; extension point introduced in Eclipse 3.8. When the plugin is installed it will change the default behavior of Eclipse and will opened all text files of unknown type in the plain text editor. Binary files like images may still be opened in an external system editor. As simple as that.&lt;br /&gt;&lt;br /&gt;The plugin is available on the &lt;a href=&quot;https://marketplace.eclipse.org/content/default-text-editor&quot;&gt;Eclipse Marketplace&lt;/a&gt;. It can also be installed through an &lt;a href=&quot;https://dl.bintray.com/kaloyan-raev/default-text-editor/&quot;&gt;update site&lt;/a&gt;. More info is available on the &lt;a href=&quot;https://github.com/eclipselabs/default-text-editor&quot;&gt;GitHub project&lt;/a&gt;.</description>
-	<pubDate>Mon, 19 Dec 2016 20:25:26 +0000</pubDate>
-	<author>noreply@blogger.com (Kaloyan Raev)</author>
-</item>
-<item>
-	<title>Ian Skerrett: IoT Trends to Watch in 2017</title>
-	<guid isPermaLink="false">http://ianskerrett.wordpress.com/?p=3864</guid>
-	<link>http://feedproxy.google.com/~r/IanSkerrett/~3/63uwfv5S40k/</link>
-	<description>&lt;p&gt;2016 has been an incredible year for the IoT industry and the pace of innovation looks like it will accelerate in 2017. Last week I participated in a webinar, organized by Canonical, on the IoT trends to watch in 2017. It was a really good discussion, so feel free to &lt;a href=&quot;https://www.brighttalk.com/webcast/6793/236729&quot;&gt;listen to the recording&lt;/a&gt;.  I think it would also be interesting to summarize some of the 2017 trends I see in the IoT industry and specifically in the Eclipse IoT community.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Industry Consolidation&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;By some counts there are &lt;a href=&quot;https://www.mobileworldlive.com/mwc16-articles/iot-experts-fret-over-fragmentation/&quot;&gt;300 IoT software platforms&lt;/a&gt; available in the market today. This is obviously not sustainable and I see this number dropping significantly in 2017. It appears the VC community is &lt;a href=&quot;https://www.cbinsights.com/blog/iot-startups-funding-deals/&quot;&gt;slowing down their investments&lt;/a&gt; in IoT startups and expect to see some of the more successful startups being acquired by larger companies looking to complete their IoT technology platform.&lt;/p&gt;
-&lt;p&gt;In the long term the number of IoT software platforms is going to consolidate to 5-7 suppliers. It will take a number of years but this is the direction the industry will take. If history repeats itself, an open source platform will be one that survives and I expect it will be from Eclipse IoT.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. Importance of Vertical Industries for IoT&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;In 2017 we will see more and more focus on vertical industries, like Industrie 4.0, Smart Cities and Connect Car. This is because IoT technology vendors need to show business value and industry solutions are how organization see the real benefit of IoT.&lt;/p&gt;
-&lt;p&gt;We will see the focus on vertical industries in different areas, including 1) vendors go-to-market strategies that offer industry specific analytics, 2) vertical industry consortium focusing more on IoT technologies, like &lt;a href=&quot;http://www.plattform-i40.de/I40/Navigation/EN/Home/home.html&quot;&gt;Industrie 4.0 in Germany&lt;/a&gt;, and 3) vertical industry open source technology, like &lt;a href=&quot;https://www.eclipse.org/4diac/&quot;&gt;Eclipse 4DIAC&lt;/a&gt; and &lt;a href=&quot;https://github.com/eclipse/milo&quot;&gt;Eclipse Milo&lt;/a&gt;. I also expect to see additional open source frameworks that will target specific industries.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3. Follow the Money: IoT Analytics&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;IoT Analytics will be very important in 2017. All the data that is being collected needs to be transformed into useful information. Expect to see analytics at the edge and via IoT cloud platforms. In 2017, we will see communities of IoT analytic algorithms emerge.&lt;/p&gt;
-&lt;p&gt;In the Eclipse IoT community, I hope we see analytics technology being incorporated into Eclipse Kura and Eclipse Kapua and new Eclipse projects that focus on IoT analytics.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4. Investments in Fog/Edge Computing&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;More and more technology is going to be released around Fog/Edge computing. The recent &lt;a href=&quot;https://aws.amazon.com/greengrass/&quot;&gt;Amazon Greengrass&lt;/a&gt; announcement is a good example. It will be interesting to see the work of the &lt;a href=&quot;https://www.openfogconsortium.org/&quot;&gt;OpenFog Computing Consortium&lt;/a&gt; being rolled out in 2017. The &lt;a href=&quot;https://projects.eclipse.org/projects/iot.iofog&quot;&gt;Eclipse ioFog&lt;/a&gt; project has lots of promise and I expect big things from it in 2017.&lt;/p&gt;
-&lt;p&gt;In 2017, Fog/Edge computing will become the buzz word for the IoT platform vendors. NOTE: of course the definition and terminology of fog or edge is still not well defined.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5. Launch of IoT Markets&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;As IoT Platforms emerge expect to see IoT markets or marketplaces emerge around them. For instance, &lt;a href=&quot;http://www.litmusautomation.com/2016/12/12/litmus-automation-announces-the-worlds-first-edge-level-iot-industrial-automation-marketplace/&quot;&gt;Litmus Automation&lt;/a&gt; recently announced a marketplace for their platform. In the Eclipse IoT community, we plan to launch in 2017 an IoT Market that will support the Eclipse Kura and Eclipse Smarthome ecosystems of drivers and applications.&lt;/p&gt;
-&lt;p&gt;Overall, 2017 is shaping up to be an exciting year for the &lt;a href=&quot;https://iot.eclipse.org/&quot;&gt;Eclipse IoT community&lt;/a&gt;. Eclipse IoT is well positioned to be the leader in open source IoT. I expect to see continued growth in adoption of Eclipse IoT technology and technical innovation within the open source projects.&lt;/p&gt;&lt;br /&gt;  &lt;a href=&quot;http://feeds.wordpress.com/1.0/gocomments/ianskerrett.wordpress.com/3864/&quot; rel=&quot;nofollow&quot;&gt;&lt;img alt=&quot;&quot; border=&quot;0&quot; src=&quot;http://feeds.wordpress.com/1.0/comments/ianskerrett.wordpress.com/3864/&quot; /&gt;&lt;/a&gt; &lt;img alt=&quot;&quot; border=&quot;0&quot; height=&quot;1&quot; src=&quot;https://pixel.wp.com/b.gif?host=ianskerrett.wordpress.com&amp;amp;blog=405862&amp;amp;post=3864&amp;amp;subd=ianskerrett&amp;amp;ref=&amp;amp;feed=1&quot; width=&quot;1&quot; /&gt;&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/IanSkerrett/~4/63uwfv5S40k&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Mon, 19 Dec 2016 17:24:44 +0000</pubDate>
 </item>
 
 </channel>

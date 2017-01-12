@@ -135,6 +135,7 @@ public class Reference {
 		NICK_BAG("nick_bag", "nick_bag"),
 		
 		WATER_BREATHING_WAND("water_breathing_wand", "water_breathing_wand"),
+		JUMP_BOOST_WAND("jump_boost_wand", "jump_boost_wand"),
 		
 		IAN_BOW("ian_bow", "ian_bow"),
 

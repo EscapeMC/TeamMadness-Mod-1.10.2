@@ -136,6 +136,8 @@ public class ModCrafting {
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.madness_furnace), new Object[] {"MMM", "MCM", "MMM", 'M', ModItems.madness_ingot, 'C', Blocks.FURNACE});
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.black_hole), new Object[] {"DMD", "MCM", "DMD", 'C', ModBlocks.madness_chest, 'D', ModItems.midm, 'M', ModItems.madness_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.nick_bag), new Object[] {" N ", "NCN", " N ", 'C', Blocks.CHEST, 'N', ModItems.midm});
+		GameRegistry.addRecipe(new ItemStack(ModItems.ian_bow), new Object[] {" N ", "NCN", " N ", 'C', Items.BOW, 'N', ModItems.midm});
+		
 		
 		
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.escapemc_ingot});
@@ -148,6 +150,7 @@ public class ModCrafting {
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_shard), new Object[] {"###", "###", "###", '#', ModItems.madness_dust});
 
 		GameRegistry.addRecipe(new ItemStack(ModItems.water_breathing_wand), new Object[] {"#E#", "ESE", "#E#", '#', ModItems.madness_dust, 'E', ModItems.escapemc_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.jump_boost_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.ianplaysyt_ingot, 'S', Items.STICK, 'I', ModItems.epicbudder22_ingot});
 
 		
 		
