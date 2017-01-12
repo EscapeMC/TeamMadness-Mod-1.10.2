@@ -36,7 +36,8 @@ public class CommonContainer9x5 extends Container {
         }
     }
 }
-	@Override
+
+    @Override
     @Nullable
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
     {
@@ -48,14 +49,14 @@ public class CommonContainer9x5 extends Container {
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if (index < this.numRows * 9)
+            if (index < this.numRows * 18)
             {
-                if (!this.mergeItemStack(itemstack1, this.numRows * 9, this.inventorySlots.size(), true))
+                if (!this.mergeItemStack(itemstack1, this.numRows * 18, this.inventorySlots.size(), true))
                 {
                     return null;
                 }
             }
-            else if (!this.mergeItemStack(itemstack1, 0, this.numRows * 9, false))
+            else if (!this.mergeItemStack(itemstack1, 0, this.numRows * 18, false))
             {
                 return null;
             }

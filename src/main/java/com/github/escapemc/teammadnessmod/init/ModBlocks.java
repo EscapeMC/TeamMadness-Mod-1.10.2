@@ -1,9 +1,13 @@
 package com.github.escapemc.teammadnessmod.init;
 
 import com.github.escapemc.teammadnessmod.Main;
+import com.github.escapemc.teammadnessmod.blocks.black_hole;
+import com.github.escapemc.teammadnessmod.blocks.bossface88_ore;
 import com.github.escapemc.teammadnessmod.blocks.cdm;
+import com.github.escapemc.teammadnessmod.blocks.diamondtips_ore;
 import com.github.escapemc.teammadnessmod.blocks.epicbudder22_ore;
 import com.github.escapemc.teammadnessmod.blocks.escapemc_ore;
+import com.github.escapemc.teammadnessmod.blocks.ianplaysyt_ore;
 import com.github.escapemc.teammadnessmod.blocks.jonahjoe2002_ore;
 import com.github.escapemc.teammadnessmod.blocks.madness_chest;
 import com.github.escapemc.teammadnessmod.blocks.madness_furnace;
@@ -28,6 +32,9 @@ public class ModBlocks {
 	public static Block mushrromstew_ore;
 	public static Block epicbudder22_ore;
 	public static Block jonahjoe2002_ore;
+	public static Block ianplaysyt_ore;
+	public static Block bossface88_ore;
+	public static Block diamondtips_ore;
 	
 	
 	public static Block ms;
@@ -35,6 +42,7 @@ public class ModBlocks {
 	public static Block madness_ore;
 	
 	public static Block madness_chest;
+	public static Block black_hole;
 	public static Block madness_furnace;
 	public static Block lit_madness_furnace;
 	
@@ -46,6 +54,9 @@ public class ModBlocks {
 		mushrromstew_ore = new mushrromstew_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		epicbudder22_ore = new epicbudder22_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		jonahjoe2002_ore = new jonahjoe2002_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
+		ianplaysyt_ore = new ianplaysyt_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
+		bossface88_ore = new bossface88_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
+		diamondtips_ore = new diamondtips_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		
 		ms = new ms(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		cdm = new cdm(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
@@ -53,11 +64,11 @@ public class ModBlocks {
 		
 		madness_furnace = new madness_furnace(Material.ROCK, false, "madness_furnace").setCreativeTab(Main.TeamMadnessModBlocksTab);
 		lit_madness_furnace = new madness_furnace(Material.ROCK, true, "lit_madness_furnace");
-		
 		madness_chest = new madness_chest(Material.ROCK).setCreativeTab(Main.TeamMadnessModBlocksTab);
 
+		black_hole = new black_hole(Material.CAKE).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		
-				
+		
 		
 	}
 	
@@ -67,6 +78,10 @@ public class ModBlocks {
 		ModBlocks.registerBlock(mushrromstew_ore);
 		ModBlocks.registerBlock(epicbudder22_ore);
 		ModBlocks.registerBlock(jonahjoe2002_ore);
+		ModBlocks.registerBlock(ianplaysyt_ore);
+		ModBlocks.registerBlock(bossface88_ore);
+		ModBlocks.registerBlock(diamondtips_ore);
+		
 		ModBlocks.registerBlock(cdm);
 		ModBlocks.registerBlock(ms);
 		ModBlocks.registerBlock(madness_ore);
@@ -74,6 +89,8 @@ public class ModBlocks {
 		ModBlocks.registerBlock(madness_chest);
 		ModBlocks.registerBlock(madness_furnace);
 		ModBlocks.registerBlock(lit_madness_furnace);
+		
+		ModBlocks.registerBlock(black_hole);
 		
 		
 		
@@ -99,6 +116,9 @@ public class ModBlocks {
 		registerRender(mushrromstew_ore);
 		registerRender(epicbudder22_ore);
 		registerRender(jonahjoe2002_ore);
+		registerRender(ianplaysyt_ore);
+		registerRender(bossface88_ore);
+		registerRender(diamondtips_ore);
 		
 		registerRender(ms);
 		registerRender(cdm);
@@ -108,6 +128,7 @@ public class ModBlocks {
 		registerRender(lit_madness_furnace);
 		
 		registerRender(madness_chest);
+		registerRender(black_hole);
 
 	}
 	

@@ -18,12 +18,15 @@ public class world_gen implements IWorldGenerator {
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
     switch (world.provider.getDimension()) {
     case 0: //Overworld
-        this.runGenerator(this.gen_escapemc_ore, world, random, chunkX, chunkZ, 7, 0, 64);
-        this.runGenerator(this.gen_mushrromstew_ore, world, random, chunkX, chunkZ, 7, 0, 64);
-        this.runGenerator(this.gen_epicbudder22_ore, world, random, chunkX, chunkZ, 7, 0, 64);
-        this.runGenerator(this.gen_jonahjoe2002_ore, world, random, chunkX, chunkZ, 7, 0, 64);
-        this.runGenerator(this.gen_ms, world, random, chunkX, chunkZ, 6, 0, 64);
-        this.runGenerator(this.gen_madness_ore, world, random, chunkX, chunkZ, 6, 0, 64);
+        this.runGenerator(this.gen_escapemc_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_mushrromstew_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_epicbudder22_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_jonahjoe2002_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_ianplaysyt_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_bossface88_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_diamondtips_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_ms, world, random, chunkX, chunkZ, 6, 0, 40);
+        this.runGenerator(this.gen_madness_ore, world, random, chunkX, chunkZ, 6, 0, 48);
         
         break;
     case -1: //Nether
@@ -38,6 +41,9 @@ public class world_gen implements IWorldGenerator {
     private WorldGenerator gen_mushrromstew_ore;
     private WorldGenerator gen_epicbudder22_ore;
     private WorldGenerator gen_jonahjoe2002_ore;
+    private WorldGenerator gen_ianplaysyt_ore;
+    private WorldGenerator gen_bossface88_ore;
+    private WorldGenerator gen_diamondtips_ore;
     private WorldGenerator gen_ms;
     private WorldGenerator gen_madness_ore;
 
@@ -48,6 +54,9 @@ public class world_gen implements IWorldGenerator {
         this.gen_mushrromstew_ore = new WorldGenMinable(ModBlocks.mushrromstew_ore.getDefaultState(), 6);
         this.gen_epicbudder22_ore = new WorldGenMinable(ModBlocks.epicbudder22_ore.getDefaultState(), 6);
         this.gen_jonahjoe2002_ore = new WorldGenMinable(ModBlocks.jonahjoe2002_ore.getDefaultState(), 6);
+        this.gen_ianplaysyt_ore = new WorldGenMinable(ModBlocks.ianplaysyt_ore.getDefaultState(), 6);
+        this.gen_bossface88_ore = new WorldGenMinable(ModBlocks.bossface88_ore.getDefaultState(), 6);
+        this.gen_diamondtips_ore = new WorldGenMinable(ModBlocks.diamondtips_ore.getDefaultState(), 6);
         this.gen_ms = new WorldGenMinable(ModBlocks.ms.getDefaultState(), 2);
         this.gen_madness_ore = new WorldGenMinable(ModBlocks.madness_ore.getDefaultState(), 5);
 

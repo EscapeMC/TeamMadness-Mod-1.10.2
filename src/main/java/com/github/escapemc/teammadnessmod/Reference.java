@@ -5,7 +5,7 @@ public class Reference {
 	
 	public static final String MOD_ID = "tmm";
 	public static final String MOD_NAME = "TeamMadness Mod";
-	public static final String MOD_VERSION = "1.6.0.1";
+	public static final String MOD_VERSION = "1.7.0.1";
 	public static final String ACCEPTED_VERSIONS = "[1.9.4,1.10.2]";
 	
 	public static final String CLIENT_PROXY_CLASS = "com.github.escapemc.teammadnessmod.proxies.ClientProxy";
@@ -18,8 +18,11 @@ public class Reference {
 		MUSHRROMSTEW_INGOT("mushrromstew_ingot", "mushrromstew_ingot"),
 		EPICBUDDER22_INGOT("epicbudder22_ingot", "epicbudder22_ingot"),
 		JONAHJOE2002_INGOT("jonahjoe2002_ingot", "jonahjoe2002_ingot"),
+		IANPLAYSYT_INGOT("ianplaysyt_ingot", "ianplaysyt_ingot"),
+		BOSSFACE88_INGOT("bossface88_ingot", "bossface88_ingot"),
+		DIAMONDTIPS_INGOT("diamondtips_ingot", "diamondtips_ingot"),
 		
-		MADNESS_DUST("madness-dust", "madness_dust"),
+		MADNESS_DUST("madness_dust", "madness_dust"),
 		
 		ESCAPEMC_SWORD("escapemc_sword", "escapemc_sword"),
 		ESCAPEMC_PICKAXE("escapemc_pickaxe", "escapemc_pickaxe"),
@@ -61,6 +64,36 @@ public class Reference {
 		JONAHJOE2002_LEGGINGS("jonahjoe2002_leggings", "jonahjoe2002_leggings"),
 		JONAHJOE2002_BOOTS("jonahjoe2002_boots", "jonahjoe2002_boots"),
 		
+		IANPLAYSYT_SWORD("ianplaysyt_sword", "ianplaysyt_sword"),
+		IANPLAYSYT_PICKAXE("ianplaysyt_pickaxe", "ianplaysyt_pickaxe"),
+		IANPLAYSYT_AXE("ianplaysyt_axe", "ianplaysyt_axe"),
+		IANPLAYSYT_SHOVEL("ianplaysyt_shovel", "ianplaysyt_shovel"),
+		IANPLAYSYT_HOE("ianplaysyt_hoe", "ianplaysyt_hoe"),
+		IANPLAYSYT_HELMET("ianplaysyt_helmet", "ianplaysyt_helmet"),
+		IANPLAYSYT_CHESTPLATE("ianplaysyt_chestplate", "ianplaysyt_chestplate"),
+		IANPLAYSYT_LEGGINGS("ianplaysyt_leggings", "ianplaysyt_leggings"),
+		IANPLAYSYT_BOOTS("ianplaysyt_boots", "ianplaysyt_boots"),
+
+		BOSSFACE88_SWORD("bossface88_sword", "bossface88_sword"),
+		BOSSFACE88_PICKAXE("bossface88_pickaxe", "bossface88_pickaxe"),
+		BOSSFACE88_AXE("bossface88_axe", "bossface88_axe"),
+		BOSSFACE88_SHOVEL("bossface88_shovel", "bossface88_shovel"),
+		BOSSFACE88_HOE("bossface88_hoe", "bossface88_hoe"),
+		BOSSFACE88_HELMET("bossface88_helmet", "bossface88_helmet"),
+		BOSSFACE88_CHESTPLATE("bossface88_chestplate", "bossface88_chestplate"),
+		BOSSFACE88_LEGGINGS("bossface88_leggings", "bossface88_leggings"),
+		BOSSFACE88_BOOTS("bossface88_boots", "bossface88_boots"),
+
+		DIAMONDTIPS_SWORD("diamondtips_sword", "diamondtips_sword"),
+		DIAMONDTIPS_PICKAXE("diamondtips_pickaxe", "diamondtips_pickaxe"),
+		DIAMONDTIPS_AXE("diamondtips_axe", "diamondtips_axe"),
+		DIAMONDTIPS_SHOVEL("diamondtips_shovel", "diamondtips_shovel"),
+		DIAMONDTIPS_HOE("diamondtips_hoe", "diamondtips_hoe"),
+		DIAMONDTIPS_HELMET("diamondtips_helmet", "diamondtips_helmet"),
+		DIAMONDTIPS_CHESTPLATE("diamondtips_chestplate", "diamondtips_chestplate"),
+		DIAMONDTIPS_LEGGINGS("diamondtips_leggings", "diamondtips_leggings"),
+		DIAMONDTIPS_BOOTS("diamondtips_boots", "diamondtips_boots"),
+
 		DARKMATTER_SWORD("darkmatter_sword", "darkmatter_sword"),
 		DARKMATTER_PICKAXE("darkmatter_pickaxe", "darkmatter_pickaxe"),
 		DARKMATTER_AXE("darkmatter_axe", "darkmatter_axe"),
@@ -84,6 +117,7 @@ public class Reference {
 		MADNESS_SHARD("madness_shard", "madness_shard"),
 		DARK_MATTER("dark_matter", "dark_matter"),
 		MADNESS_INGOT("madness_ingot", "madness_ingot"),
+		MIDM("midm", "midm"),
 		
 		ASHLEY_MUSICNOTE("ashley_musicnote", "ashley_musicnote"),
 		ASHLEY_HEADPHONES("ashley_headphones", "ashley_headphones"),
@@ -91,18 +125,27 @@ public class Reference {
 		BEEF_TACO("beef_taco", "beef_taco"),
 		CHICKEN_TACO("chicken_taco", "chicken_taco"),
 		CHOCO_TACO("choco_taco", "choco_taco"),
-		RABBIT_TACO("rabbit_taco", "rabbit_taco"),	
+		RABBIT_TACO("rabbit_taco", "rabbit_taco"),
+		TORTILLA("tortilla", "tortilla"),
 
 
 		MADNESS_CHEST("madness_chest", "madness_chest"),
+		BLACK_HOLE("black_hole", "black_hole"),
 		
 		NICK_BAG("nick_bag", "nick_bag"),
+		
+		WATER_BREATHING_WAND("water_breathing_wand", "water_breathing_wand"),
+		
+		IAN_BOW("ian_bow", "ian_bow"),
 
 		
 		ESCAPEMC_ORE("escapemc_ore", "escapemc_ore"),
 		JONAHJOE2002_ORE("jonahjoe2002_ore", "jonahjoe2002_ore"),
 		EPICBUDDER22_ORE("epicbudder22_ore", "epicbudder22_ore"),
 		MUSHRROMSTEW_ORE("mushrromstew_ore", "mushrromstew_ore"),
+		IANPLAYSYT_ORE("ianplaysyt_ore", "ianplaysyt_ore"),
+		BOSSFACE88_ORE("bossface88_ore", "bossface88_ore"),
+		DIAMONDTIPS_ORE("diamondtips_ore", "diamondtips_ore"),
 		CDM("cdm", "cdm"),
 		MS("ms", "ms"),
 		MADNESS_ORE("madness_ore", "madness_ore");

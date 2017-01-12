@@ -44,7 +44,7 @@ public class CommonContainerRightClickable extends Container {
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if (index < this.numRows * 9)
+            if (index < this.numRows * 18)
             {
                 if (!this.mergeItemStack(itemstack1, this.numRows * 9, this.inventorySlots.size(), true))
                 {

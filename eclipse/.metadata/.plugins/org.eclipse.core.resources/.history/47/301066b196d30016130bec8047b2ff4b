@@ -1,0 +1,46 @@
+package com.github.IANPLAYSYT.teammadnessmod.items;
+
+import com.github.escapemc.teammadnessmod.Reference;
+
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.ItemArmor;
+
+public class ianplaysyt_armor extends ItemArmor {
+
+	public ianplaysyt_armor(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
+	
+		if(equipmentSlotIn == EntityEquipmentSlot.HEAD) {
+			setUnlocalizedName(Reference.ModItems.IANPLAYSYT_HELMET.getUnlocalizedName());
+			setRegistryName(Reference.ModItems.IANPLAYSYT_HELMET.getRegistryName());
+
+		
+		
+		}
+			
+		if(equipmentSlotIn == EntityEquipmentSlot.CHEST) {
+			setUnlocalizedName(Reference.ModItems.IANPLAYSYT_CHESTPLATE.getUnlocalizedName());
+			setRegistryName(Reference.ModItems.IANPLAYSYT_CHESTPLATE.getRegistryName());
+
+		
+		
+		}
+
+		if(equipmentSlotIn == EntityEquipmentSlot.LEGS) {
+			setUnlocalizedName(Reference.ModItems.IANPLAYSYT_LEGGINGS.getUnlocalizedName());
+			setRegistryName(Reference.ModItems.IANPLAYSYT_LEGGINGS.getRegistryName());
+
+		
+		
+		}
+
+		if(equipmentSlotIn == EntityEquipmentSlot.FEET) {
+			setUnlocalizedName(Reference.ModItems.IANPLAYSYT_BOOTS.getUnlocalizedName());
+			setRegistryName(Reference.ModItems.IANPLAYSYT_BOOTS.getRegistryName());
+
+		
+		
+		}
+	}
+
+}

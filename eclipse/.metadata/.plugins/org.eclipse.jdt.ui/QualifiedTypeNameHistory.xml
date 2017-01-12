@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.init.ModItems"/>
-<fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.Reference"/>
-<fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.Main"/>
 <fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.container.ContainerNickBag"/>
 <fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.client.gui.GuiNickBag"/>
+<fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.Main"/>
+<fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.tileentity.TileEntityBlackHole"/>
+<fullyQualifiedTypeName name="com.github.escapemc.teammadnessmod.Reference"/>
 </qualifiedTypeNameHistroy>
