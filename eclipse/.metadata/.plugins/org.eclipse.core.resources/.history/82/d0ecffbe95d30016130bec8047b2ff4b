@@ -1,7 +1,0 @@
-package com.github.escapemc.teammadnessmod.items;
-
-import net.minecraft.item.Item;
-
-public class ianplaysyt_ingot extends Item {
-
-}

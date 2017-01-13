@@ -41,6 +41,7 @@ import com.github.escapemc.teammadnessmod.items.escapemc_pickaxe;
 import com.github.escapemc.teammadnessmod.items.escapemc_shovel;
 import com.github.escapemc.teammadnessmod.items.escapemc_sword;
 import com.github.escapemc.teammadnessmod.items.etc_armor;
+import com.github.escapemc.teammadnessmod.items.haste_wand;
 import com.github.escapemc.teammadnessmod.items.ian_bow;
 import com.github.escapemc.teammadnessmod.items.ianplaysyt_armor;
 import com.github.escapemc.teammadnessmod.items.ianplaysyt_axe;
@@ -76,6 +77,7 @@ import com.github.escapemc.teammadnessmod.items.mushrromstew_shovel;
 import com.github.escapemc.teammadnessmod.items.mushrromstew_sword;
 import com.github.escapemc.teammadnessmod.items.nick_bag;
 import com.github.escapemc.teammadnessmod.items.rabbit_taco;
+import com.github.escapemc.teammadnessmod.items.speed_wand;
 import com.github.escapemc.teammadnessmod.items.tortilla;
 import com.github.escapemc.teammadnessmod.items.water_breathing_wand;
 
@@ -209,26 +211,26 @@ public class ModItems {
 	public static Item nick_bag;
 	public static Item ian_bow;
 		
-	public static Item one_wand;
-	public static Item two_wand;
+	public static Item haste_wand;
+	public static Item speed_wand;
 	public static Item jump_boost_wand;
 	public static Item water_breathing_wand;
 	
 	
 	
-	public static final Item.ToolMaterial escapemc_tool_material = EnumHelper.addToolMaterial("escapemc_tool_material", 3, 1401, 6, 7, 30);
-	public static final Item.ToolMaterial mushrromstew_tool_material = EnumHelper.addToolMaterial("mushrromstew_tool_material", 3, 1401, 6, 7, 30);
-	public static final Item.ToolMaterial epicbudder22_tool_material = EnumHelper.addToolMaterial("epicbudder22_tool_material", 3, 1401, 6, 7, 30);
-	public static final Item.ToolMaterial jonahjoe2002_tool_material = EnumHelper.addToolMaterial("jonahjoe2002_tool_material", 3, 1401, 6, 7, 30);
-	public static final Item.ToolMaterial diamondtips_tool_material = EnumHelper.addToolMaterial("diamondtips_tool_material", 3, 1401, 6, 7, 30);
-	public static final Item.ToolMaterial ianplaysyt_tool_material = EnumHelper.addToolMaterial("ianplaysyt_tool_material", 3, 1401, 6, 7, 30);
-	public static final Item.ToolMaterial bossface88_tool_material = EnumHelper.addToolMaterial("bosface88_tool_material", 3, 1401, 6, 7, 30);
+	public static final Item.ToolMaterial escapemc_tool_material = EnumHelper.addToolMaterial("escapemc_tool_material", 3, 1401, 7, 7, 30);
+	public static final Item.ToolMaterial mushrromstew_tool_material = EnumHelper.addToolMaterial("mushrromstew_tool_material", 3, 1401, 7, 7, 30);
+	public static final Item.ToolMaterial epicbudder22_tool_material = EnumHelper.addToolMaterial("epicbudder22_tool_material", 3, 1401, 7, 7, 30);
+	public static final Item.ToolMaterial jonahjoe2002_tool_material = EnumHelper.addToolMaterial("jonahjoe2002_tool_material", 3, 1401, 7, 7, 30);
+	public static final Item.ToolMaterial diamondtips_tool_material = EnumHelper.addToolMaterial("diamondtips_tool_material", 3, 1401, 7, 7, 30);
+	public static final Item.ToolMaterial ianplaysyt_tool_material = EnumHelper.addToolMaterial("ianplaysyt_tool_material", 3, 1401, 7, 7, 30);
+	public static final Item.ToolMaterial bossface88_tool_material = EnumHelper.addToolMaterial("bosface88_tool_material", 3, 1401, 7, 7, 30);
 
 
-	public static final Item.ToolMaterial darkmatter_tool_material = EnumHelper.addToolMaterial("darkmatter_tool_material", 3, 14001, 26, 22, 30);
+	public static final Item.ToolMaterial darkmatter_tool_material = EnumHelper.addToolMaterial("darkmatter_tool_material", 3, 14002, 26, 22, 30);
 	public static final Item.ToolMaterial darkmatter_sword_material = EnumHelper.addToolMaterial("darkmatter_sword_material", 3, 14002, 26, 76, 30);
 	
-	public static final Item.ToolMaterial madness_tool_material = EnumHelper.addToolMaterial("madness_tool_material", 3, 33001, 30, 54, 30);
+	public static final Item.ToolMaterial madness_tool_material = EnumHelper.addToolMaterial("madness_tool_material", 3, 33002, 30, 54, 30);
 	public static final Item.ToolMaterial madness_sword_material = EnumHelper.addToolMaterial("madness_sword_material", 3, 33002, 30, 126, 30);
 	
 	//public static final Item.ToolMaterial test = EnumHelper.addToolMaterial(name, harvestLevel, maxUses, efficiency, damage, enchantability)
@@ -247,6 +249,7 @@ public class ModItems {
 
 	public static ArmorMaterial darkmatter_armor_material = EnumHelper.addArmorMaterial("darkmatter_armor_material", "tmm:darkmatter_armor", 7293, new int[] {4, 6, 7, 4}, 30, null, 0);	
 	public static ArmorMaterial madness_armor_material = EnumHelper.addArmorMaterial("madness_armor_material", "tmm:madness_armor", 14293, new int[] {5, 6, 8, 5}, 30, null, 0);	
+
 	//public static ArmorMatieral name_of_material = EnumHelper.addArmorMaterial(name, textureName, durability, reductionAmounts, enchantability)
 
 	
@@ -265,7 +268,7 @@ public class ModItems {
 		
 		escapemc_sword = new escapemc_sword(escapemc_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		escapemc_pickaxe = new escapemc_pickaxe(escapemc_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		escapemc_axe = new escapemc_axe(escapemc_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		escapemc_axe = new escapemc_axe(escapemc_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		escapemc_shovel = new escapemc_shovel(escapemc_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		escapemc_hoe = new escapemc_hoe(escapemc_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		escapemc_helmet = new escapemc_armor(escapemc_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -275,7 +278,7 @@ public class ModItems {
 
 		mushrromstew_sword = new mushrromstew_sword(mushrromstew_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		mushrromstew_pickaxe = new mushrromstew_pickaxe(mushrromstew_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		mushrromstew_axe = new mushrromstew_axe(mushrromstew_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		mushrromstew_axe = new mushrromstew_axe(mushrromstew_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		mushrromstew_shovel = new mushrromstew_shovel(mushrromstew_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		mushrromstew_hoe = new mushrromstew_hoe(mushrromstew_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		mushrromstew_helmet = new mushrromstew_armor(mushrromstew_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -285,7 +288,7 @@ public class ModItems {
 
 		epicbudder22_sword = new epicbudder22_sword(epicbudder22_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		epicbudder22_pickaxe = new epicbudder22_pickaxe(epicbudder22_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		epicbudder22_axe = new epicbudder22_axe(epicbudder22_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		epicbudder22_axe = new epicbudder22_axe(epicbudder22_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		epicbudder22_shovel = new epicbudder22_shovel(epicbudder22_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		epicbudder22_hoe = new epicbudder22_hoe(epicbudder22_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		epicbudder22_helmet = new epicbudder22_armor(epicbudder22_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -295,7 +298,7 @@ public class ModItems {
 
 		jonahjoe2002_sword = new jonahjoe2002_sword(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		jonahjoe2002_pickaxe = new jonahjoe2002_pickaxe(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		jonahjoe2002_axe = new jonahjoe2002_axe(jonahjoe2002_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		jonahjoe2002_axe = new jonahjoe2002_axe(jonahjoe2002_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		jonahjoe2002_shovel = new jonahjoe2002_shovel(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		jonahjoe2002_hoe = new jonahjoe2002_hoe(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		jonahjoe2002_helmet = new jonahjoe2002_armor(jonahjoe2002_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -305,7 +308,7 @@ public class ModItems {
 
 		ianplaysyt_sword = new ianplaysyt_sword(ianplaysyt_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		ianplaysyt_pickaxe = new ianplaysyt_pickaxe(ianplaysyt_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		ianplaysyt_axe = new ianplaysyt_axe(ianplaysyt_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		ianplaysyt_axe = new ianplaysyt_axe(ianplaysyt_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		ianplaysyt_shovel = new ianplaysyt_shovel(ianplaysyt_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		ianplaysyt_hoe = new ianplaysyt_hoe(ianplaysyt_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		ianplaysyt_helmet = new ianplaysyt_armor(ianplaysyt_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -315,7 +318,7 @@ public class ModItems {
 		
 		bossface88_sword = new bossface88_sword(bossface88_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		bossface88_pickaxe = new bossface88_pickaxe(bossface88_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		bossface88_axe = new bossface88_axe(bossface88_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		bossface88_axe = new bossface88_axe(bossface88_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		bossface88_shovel = new bossface88_shovel(bossface88_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		bossface88_hoe = new bossface88_hoe(bossface88_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		bossface88_helmet = new bossface88_armor(bossface88_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -325,7 +328,7 @@ public class ModItems {
 
 		diamondtips_sword = new diamondtips_sword(diamondtips_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		diamondtips_pickaxe = new diamondtips_pickaxe(diamondtips_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		diamondtips_axe = new diamondtips_axe(diamondtips_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		diamondtips_axe = new diamondtips_axe(diamondtips_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		diamondtips_shovel = new diamondtips_shovel(diamondtips_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		diamondtips_hoe = new diamondtips_hoe(diamondtips_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		diamondtips_helmet = new diamondtips_armor(diamondtips_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -336,7 +339,7 @@ public class ModItems {
 
 		darkmatter_sword = new darkmatter_sword(darkmatter_sword_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		darkmatter_pickaxe = new darkmatter_pickaxe(darkmatter_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		darkmatter_axe = new darkmatter_axe(darkmatter_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		darkmatter_axe = new darkmatter_axe(darkmatter_tool_material, 86, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		darkmatter_shovel = new darkmatter_shovel(darkmatter_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		darkmatter_hoe = new darkmatter_hoe(darkmatter_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		darkmatter_helmet = new darkmatter_armor(darkmatter_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -346,7 +349,7 @@ public class ModItems {
 
 		madness_sword = new madness_sword(madness_sword_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		madness_pickaxe = new madness_pickaxe(madness_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		madness_axe = new madness_axe(madness_tool_material, 10, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		madness_axe = new madness_axe(madness_tool_material, 140, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
 		madness_shovel = new madness_shovel(madness_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		madness_hoe = new madness_hoe(madness_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		madness_helmet = new madness_armor(madness_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
@@ -363,10 +366,10 @@ public class ModItems {
 		madness_dust = new madness_dust().setCreativeTab(Main.TeamMadnessModMaterialsTab);
 		midm = new midm().setCreativeTab(Main.TeamMadnessModMaterialsTab);
 		
-		beef_taco = new beef_taco(14, 2, false).setCreativeTab(Main.TeamMadnessModItemsTab);
-		chicken_taco = new chicken_taco(11, 2, false).setCreativeTab(Main.TeamMadnessModItemsTab);
+		beef_taco = new beef_taco(14, 2, true).setCreativeTab(Main.TeamMadnessModItemsTab);
+		chicken_taco = new chicken_taco(11, 2, true).setCreativeTab(Main.TeamMadnessModItemsTab);
 		choco_taco = new choco_taco(7, 2, false).setCreativeTab(Main.TeamMadnessModItemsTab);
-		rabbit_taco = new rabbit_taco(11, 2, false).setCreativeTab(Main.TeamMadnessModItemsTab);
+		rabbit_taco = new rabbit_taco(11, 2, true).setCreativeTab(Main.TeamMadnessModItemsTab);
 		tortilla = new tortilla(3, 2, false).setCreativeTab(Main.TeamMadnessModItemsTab);
 
 		nick_bag = new nick_bag().setCreativeTab(Main.TeamMadnessModItemsTab);
@@ -374,6 +377,8 @@ public class ModItems {
 		
 		water_breathing_wand = new water_breathing_wand().setCreativeTab(Main.TeamMadnessModItemsTab);
 		jump_boost_wand = new jump_boost_wand().setCreativeTab(Main.TeamMadnessModItemsTab);
+		speed_wand = new speed_wand().setCreativeTab(Main.TeamMadnessModItemsTab);
+		haste_wand = new haste_wand().setCreativeTab(Main.TeamMadnessModItemsTab);
 				
 		
 	}
@@ -487,17 +492,19 @@ public class ModItems {
 		GameRegistry.register(madness_dust);
 		GameRegistry.register(midm);
 		
+		GameRegistry.register(tortilla);
 		GameRegistry.register(beef_taco);
 		GameRegistry.register(chicken_taco);
 		GameRegistry.register(choco_taco);
 		GameRegistry.register(rabbit_taco);
-		GameRegistry.register(tortilla);
 
 		GameRegistry.register(nick_bag);
 		GameRegistry.register(ian_bow);
 		
 		GameRegistry.register(water_breathing_wand);
 		GameRegistry.register(jump_boost_wand);
+		GameRegistry.register(speed_wand);
+		GameRegistry.register(haste_wand);
 		
 		
 	}
@@ -623,6 +630,8 @@ public class ModItems {
 		
 		registerRender(water_breathing_wand);
 		registerRender(jump_boost_wand);
+		registerRender(speed_wand);
+		registerRender(haste_wand);
 		
 		
 	}

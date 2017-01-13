@@ -1,5 +1,5 @@
 {
-    "parent": "item/generated",
+    "parent": "item/handheld",
     "textures": {
         "layer0": "tmm:items/jump_boost_wand"
     }

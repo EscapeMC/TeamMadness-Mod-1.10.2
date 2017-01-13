@@ -6,6 +6,27 @@
     <language>en</language>
      <atom:link href="http://marketplace.eclipse.org/rss.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Stereotype Checker</title>
+    <link>http://marketplace.eclipse.org/content/stereotype-checker</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/nt-logo-marketplace.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2017-01-13 04:03&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2017-01-13 09:32&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22NovaTec%20Consulting%20GmbH%22&quot;&gt;NovaTec Consulting GmbH&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cnovatec/listings&quot; title=&quot;CA ITA Novatec&quot;&gt;CA ITA Novatec&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The Stereotype Checker is an extension to checkstyle checking if your code matches the defined architecture.&lt;/p&gt;
+&lt;p&gt;More information can be found on the &lt;a href=&quot;https://github.com/NovaTecConsulting/stereotype-check&quot;&gt;GitHub pages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If you don&#039;t check your architecture it doesn&#039;t exist in reality.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The architecture is a contract between developers (including the architect if one exists) of a project on how to structure a software. In a classical architecture there are many layers (e.g. UI, business, persistence) and the architecture defines which layer is allowed to talk to another layer. If you don&#039;t check this automatically, often this contract is not followed due to the reason that the developer does not get a fast or even any feedback that some changes break the contract.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How does the stereotype check help following the contract?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In a layered architecture often there are some classes that implement a special behavior like transformer, controllers or business functions. They are called stereotypes. Stereotypes belong to a specific layer. Stereotypes are defined by a combination of:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Postfix of the classname&lt;/li&gt;
+&lt;li&gt;Package of the class&lt;/li&gt;
+&lt;li&gt;Interface implemented by the class&lt;/li&gt;
+&lt;li&gt;Class extended by the class&lt;/li&gt;
+&lt;li&gt;Annotations the class has&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The stereotype check tests if a class conforms to a configured stereotype and checks if the class has a dependency to an other stereotype class that is not allowed.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 13 Jan 2017 09:03:51 +0000</pubDate>
+ <dc:creator>cnovatec</dc:creator>
+ <guid isPermaLink="false">3253213 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/stereotype-checker#comments</comments>
+  </item>
+  <item>
     <title>DSL Forge</title>
     <link>http://marketplace.eclipse.org/content/dsl-forge</link>
     <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/dslforge_0.png&quot; width=&quot;110&quot; height=&quot;39&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sun, 2016-01-17 16:46&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-01-11 11:58&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22PlugBee%22&quot;&gt;PlugBee&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/alajmi/listings&quot; title=&quot;Amine Lajmi&quot;&gt;Amine Lajmi&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;DSL Forge is a generator of domain-specific language (DSL) editors for web applications and cloud IDEs. &lt;/p&gt;
@@ -206,50 +227,6 @@ will help a lot of Developers in this world to move forward more easily.&lt;/p&g
  <dc:creator>kishimoto7py</dc:creator>
  <guid isPermaLink="false">3248902 at http://marketplace.eclipse.org</guid>
  <comments>http://marketplace.eclipse.org/content/tblips#comments</comments>
-  </item>
-  <item>
-    <title>/n software IP*Works 2016 JAVA Edition</title>
-    <link>http://marketplace.eclipse.org/content/n-software-ipworks-2016-java-edition</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/IP2016_0.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2016-06-10 06:50&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-01-11 04:54&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22/n%20software%22&quot;&gt;/n software&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/ihaznedari/listings&quot; title=&quot;Irida Haznedari&quot;&gt;Irida Haznedari&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;IP*Works! is a comprehensive framework for Internet development and is the core building block for most /n software products. IP*Works! eliminates the complexity of Internet development, providing easy-to-use, programmable components that facilitate tasks such as sending email, transferring files, managing networks, browsing the Web, consuming Web Services, etc. &lt;/p&gt;
-&lt;ul&gt;&lt;li&gt; &lt;strong&gt; All Major Internet Protocols &lt;/strong&gt; Components for FTP, HTTP, SMTP, ODATA, POP, IMAP, LDAP, DNS, RSS, SMS, Jabber, SOAP, WebDav, JSON, XML, and many more! &lt;/li&gt;
-&lt;li&gt; &lt;strong&gt; Uniform &amp;amp; Extensible Design &lt;/strong&gt; Very easy to use, with a uniform, intuitive, and extensible design. Common component interfaces across platforms and technologies. &lt;/li&gt;
-&lt;li&gt; &lt;strong&gt; Outstanding Technical Support &lt;/strong&gt; Backed by an expert team of support professionals. Unlimited, free Email support or paid Premium Support options. &lt;/li&gt;
-&lt;li&gt; &lt;strong&gt; Blazing Performance &lt;/strong&gt; Based on an optimized asynchronous socket architecture that has been actively refined for more than a decade. &lt;/li&gt;
-&lt;li&gt; &lt;strong&gt; Fully Integrated Components &lt;/strong&gt; Native software components for any supported development technology, with no dependencies on external libraries. &lt;/li&gt;
-&lt;li&gt; &lt;strong&gt; Other Features &lt;/strong&gt; Detailed documentation, hundreds of sample applications, fully indexed help files, royalty-free licensing, and more. &lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt; &lt;strong&gt; Features &lt;/strong&gt;&lt;br /&gt;
- A robust framework including more than 40 enterprise-class controls, IP*Works! enables rapid integration of any major Internet communications protocol or technology, including: FTP, HTTP, SMTP, POP, IMAP, LDAP, DNS, RSS, SMPP(SMS), XMPP (Jabber), SOAP, WebDav, and more! &lt;/p&gt;
-&lt;ul&gt;&lt;li&gt; A comprehensive suite of tools covering all major Internet technologies. &lt;/li&gt;
-&lt;li&gt; Fast, robust, and reliable, the components consume a minimum of resources. &lt;/li&gt;
-&lt;li&gt; Small and lightweight components with no dependencies on external libraries. &lt;/li&gt;
-&lt;li&gt; Native development components for all supported platforms and component technologies. &lt;/li&gt;
-&lt;li&gt; A complete unified framework with a common easy-to-learn object model and simplified interfaces allowing you to be more productive. &lt;/li&gt;
-&lt;li&gt; Rigorously tested, rock solid components that have undergone hundreds of thousands of hours of testing both internally by our QA team and externally through customer installations. &lt;/li&gt;
-&lt;li&gt; Detailed reference documentation, hundreds of sample applications, fully indexed help files, and an extensive online knowledge base. &lt;/li&gt;
-&lt;li&gt; Backed by multi-tier professional support, including free email support and paid, enterprise-level Premium Support. &lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt; &lt;strong&gt; Technologies &lt;/strong&gt;&lt;br /&gt;
- IP*Works!  is available for: &lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;.NET&lt;/li&gt;
-&lt;li&gt;JAVA/ J2EE&lt;/li&gt;
-&lt;li&gt;ActiveX&lt;/li&gt;
-&lt;li&gt;Classic ASP&lt;/li&gt;
-&lt;li&gt;Delphi&lt;/li&gt;
-&lt;li&gt;C++&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;C++ Builder&lt;/li&gt;
-&lt;li&gt;Mac OS&lt;/li&gt;
-&lt;li&gt;PHP&lt;/li&gt;
-&lt;li&gt;Android&lt;/li&gt;
-&lt;li&gt;iOS (iPad/iPhone)&lt;/li&gt;
-&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Xamarin&lt;/li&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;li&gt;NodesJS&lt;/li&gt;
-&lt;li&gt;UNIX&lt;/li&gt;
-&lt;li&gt;Windows Phone&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
-     <pubDate>Fri, 10 Jun 2016 10:50:19 +0000</pubDate>
- <dc:creator>ihaznedari</dc:creator>
- <guid isPermaLink="false">2924379 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/n-software-ipworks-2016-java-edition#comments</comments>
   </item>
   <item>
     <title>Ctrlflow Code Search for Java (30 Days Free)</title>

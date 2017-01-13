@@ -1,7 +1,0 @@
-package com.github.escapemc.teammadnessmod.init;
-
-import net.minecraft.block.Block;
-
-public class black_hole extends Block {
-
-}

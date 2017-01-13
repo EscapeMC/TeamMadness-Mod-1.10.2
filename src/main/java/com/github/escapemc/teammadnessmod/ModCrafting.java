@@ -151,6 +151,8 @@ public class ModCrafting {
 
 		GameRegistry.addRecipe(new ItemStack(ModItems.water_breathing_wand), new Object[] {"#E#", "ESE", "#E#", '#', ModItems.madness_dust, 'E', ModItems.escapemc_ingot, 'S', Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(ModItems.jump_boost_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.ianplaysyt_ingot, 'S', Items.STICK, 'I', ModItems.epicbudder22_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.speed_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.bossface88_ingot, 'S', Items.STICK, 'I', ModItems.jonahjoe2002_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.haste_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.diamondtips_ingot, 'S', Items.STICK, 'I', ModItems.mushrromstew_ingot});
 
 		
 		

@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "tmm:blocks/madness_furnace_top",
+        "front": "tmm:blocks/madness_furnace_front_on",
+        "side": "tmm:blocks/madness_furnace_side"
+    }
+}

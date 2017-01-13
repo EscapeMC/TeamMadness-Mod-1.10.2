@@ -1,0 +1,154 @@
+itemGroup.TeamMadnessModItemsTab=TeamMadness Mod Items
+itemGroup.TeamMadnessModMaterialsTab=TeamMadness Mod Materials
+itemGroup.TeamMadnessModArmorTab=TeamMadness Mod Armor
+itemGroup.TeamMadnessModBlocksTab=TeamMadness Mod Blocks
+
+
+tile.escapemc_ore.name=EscapeMC Ore
+tile.mushrromstew_ore.name=MushrromStew Ore
+tile.epicbudder22_ore.name=epicbudder22 Ore
+tile.jonahjoe2002_ore.name=jonahjoe2002 Ore
+tile.ianplaysyt_ore.name=IanPlaysYT Ore
+tile.bossface88_ore.name=bossface88_ore
+tile.diamondtips_ore.name=01diamondtips Ore
+
+tile.ms.name=Mysterious Substance...
+tile.cdm.name=Condensed Dark Matter
+tile.madness_ore.name=Madness Ore
+
+item.madness_shard.name=Madness Shard
+item.madness_ingot.name=Madness Ingot
+item.madness_shard.name=Madness Shard
+item.dark_matter.name=Dark Matter
+item.midm.name=Madness Infused Dark Matter
+
+item.beef_taco.name=Beef Taco
+item.chicken_taco.name=Chicken Taco
+item.choco_taco.name=Choco Taco
+item.rabbit_taco.name=Rabbit Taco
+item.tortilla.name=Tortilla
+
+
+item.ashley_headphones.name=Beats
+item.ashley_musicnote.name=Music
+
+item.nick_bag.name=Nick's Shopping Bag
+item.ian_bow.name=Ian's Bow
+
+
+item.escapemc_ingot.name=EscapeMC Ingot
+item.mushrromstew_ingot.name=MushrromStew Ingot
+item.epicbudder22_ingot.name=epicbudder22 Ingot
+item.jonahjoe2002_ingot.name=jonahjoe2002 Ingot
+item.ianplaysyt_ingot.name=IanPlaysYT Ingot
+item.bossface88_ingot.name=bossface88 Ingot
+item.diamondtips_ingot.name=01diamondtips Ingot
+
+
+item.escapemc_sword.name=EscapeMC Sword
+item.escapemc_pickaxe.name=EscapeMC Pickaxe
+item.escapemc_axe.name=EscapeMC Axe
+item.escapemc_shovel.name=EscapeMC Shovel
+item.escapemc_hoe.name=EscapeMC Hoe
+item.escapemc_helmet.name=EscapeMC Helmet
+item.escapemc_chestplate.name=EscapeMC Chestplate
+item.escapemc_leggings.name=EscapeMC Leggings
+item.escapemc_boots.name=EscapeMC Boots
+
+item.mushrromstew_sword.name=MushrromStew Sword
+item.mushrromstew_pickaxe.name=MushrromStew Pickaxe
+item.mushrromstew_axe.name=MushrromStew Axe
+item.mushrromstew_shovel.name=MushrromStew Shovel
+item.mushrromstew_hoe.name=MushrromStew Hoe
+item.mushrromstew_helmet.name=MushrromStew Helmet
+item.mushrromstew_chestplate.name=MushrromStew Chestplate
+item.mushrromstew_leggings.name=MushrromStew Leggings
+item.mushrromstew_boots.name=MushrromStew Boots
+
+item.epicbudder22_sword.name=epicbudder22 Sword
+item.epicbudder22_pickaxe.name=epicbudder22 Pickaxe
+item.epicbudder22_axe.name=epicbudder22 Axe
+item.epicbudder22_shovel.name=epicbudder22 Shovel
+item.epicbudder22_hoe.name=epicbudder22 Hoe
+item.epicbudder22_helmet.name=epicbudder22 Helmet
+item.epicbudder22_chestplate.name=epicbudder22 Chestplate
+item.epicbudder22_leggings.name=epicbudder22 Leggings
+item.epicbudder22_boots.name=epicbudder22 Boots
+
+item.jonahjoe2002_sword.name=jonahjoe2002 Sword
+item.jonahjoe2002_pickaxe.name=jonahjoe2002 Pickaxe
+item.jonahjoe2002_axe.name=jonahjoe2002 Axe
+item.jonahjoe2002_shovel.name=jonahjoe2002 Shovel
+item.jonahjoe2002_hoe.name=jonahjoe2002 Hoe
+item.jonahjoe2002_helmet.name=jonahjoe2002 Helmet
+item.jonahjoe2002_chestplate.name=jonahjoe2002 Chestplate
+item.jonahjoe2002_leggings.name=jonahjoe2002 Leggings
+item.jonahjoe2002_boots.name=jonahjoe2002 Boots
+
+item.ianplaysyt_sword.name=IanPlaysYT Sword
+item.ianplaysyt_pickaxe.name=IanPlaysYT Pickaxe
+item.ianplaysyt_axe.name=IanPlaysYT Axe
+item.ianplaysyt_shovel.name=IanPlaysYT Shovel
+item.ianplaysyt_hoe.name=IanPlaysYT Hoe
+item.ianplaysyt_helmet.name=IanPlaysYT Helmet
+item.ianplaysyt_chestplate.name=IanPlaysYT Chestplate
+item.ianplaysyt_leggings.name=IanPlaysYT Leggings
+item.ianplaysyt_boots.name=IanPlaysYT Boots
+
+item.bossface88_sword.name=bossface88 Sword
+item.bossface88_pickaxe.name=bossface88 Pickaxe
+item.bossface88_axe.name=bossface88 Axe
+item.bossface88_shovel.name=bossface88 Shovel
+item.bossface88_hoe.name=bossface88 Hoe
+item.bossface88_helmet.name=bossface88 Helmet
+item.bossface88_chestplate.name=bossface88 Chestplate
+item.bossface88_leggings.name=bossface88 Leggings
+item.bossface88_boots.name=bossface88 Boots
+
+item.diamondtips_sword.name=01diamondtips Sword
+item.diamondtips_pickaxe.name=01diamondtips Pickaxe
+item.diamondtips_axe.name=01diamondtips Axe
+item.diamondtips_shovel.name=01diamondtips Shovel
+item.diamondtips_hoe.name=01diamondtips Hoe
+item.diamondtips_helmet.name=01diamondtips Helmet
+item.diamondtips_chestplate.name=01diamondtips Chestplate
+item.diamondtips_leggings.name=01diamondtips Leggings
+item.diamondtips_boots.name=01diamondtips Boots
+
+
+item.darkmatter_sword.name=Dark Matter Sword
+item.darkmatter_pickaxe.name=Dark Matter Pickaxe
+item.darkmatter_axe.name=Dark Matter Axe
+item.darkmatter_shovel.name=Dark Matter Shovel
+item.darkmatter_hoe.name=Dark Matter Hoe
+item.darkmatter_helmet.name=Dark Matter Helmet
+item.darkmatter_chestplate.name=Dark Matter Chestplate
+item.darkmatter_leggings.name=Dark Matter Leggings
+item.darkmatter_boots.name=Dark Matter Boots
+
+
+item.madness_sword.name=Madness Sword
+item.madness_pickaxe.name=Madness Pickaxe
+item.madness_axe.name=Madness Axe
+item.madness_shovel.name=Madness Shovel
+item.madness_hoe.name=Madness Hoe
+item.madness_helmet.name=Madness Helmet
+item.madness_chestplate.name=Madness Chestplate
+item.madness_leggings.name=Madness Leggings
+item.madness_boots.name=Madness Boots
+
+container.madness_chest=Madness Chest
+container.madness_furnace=Madness Furnace
+container.nick_bag=Nick's Shopping Bag
+container.black_hole=Black Hole...
+
+tile.madness_furnace.name=Madness Furnace
+tile.lit_madness_furnace.name=Lit Madness Furnace
+tile.madness_chest.name=Madness Chest
+tile.black_hole.name=Black Hole...
+
+item.water_breathing_wand.name=Wand of Water Breathing
+item.jump_boost_wand.name=Wand of Jump Boost
+item.speed_wand.name=Wand of Speed
+item.saturation_wand.name=Wand of Saturation
+

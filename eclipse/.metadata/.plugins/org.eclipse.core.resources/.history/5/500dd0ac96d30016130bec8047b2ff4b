@@ -1,7 +1,0 @@
-package com.github.escapemc.teammadnessmod.items;
-
-import net.minecraft.item.ItemArmor;
-
-public class ianplaysyt_armor extends ItemArmor {
-
-}

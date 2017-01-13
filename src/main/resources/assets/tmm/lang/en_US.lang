@@ -18,6 +18,7 @@ tile.madness_ore.name=Madness Ore
 
 item.madness_shard.name=Madness Shard
 item.madness_ingot.name=Madness Ingot
+item.madness_shard.name=Madness Shard
 item.dark_matter.name=Dark Matter
 item.midm.name=Madness Infused Dark Matter
 
@@ -148,4 +149,6 @@ tile.black_hole.name=Black Hole...
 
 item.water_breathing_wand.name=Wand of Water Breathing
 item.jump_boost_wand.name=Wand of Jump Boost
+item.speed_wand.name=Wand of Speed
+item.haste_wand.name=Wand of Haste
 

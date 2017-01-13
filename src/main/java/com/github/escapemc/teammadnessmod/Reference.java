@@ -136,6 +136,8 @@ public class Reference {
 		
 		WATER_BREATHING_WAND("water_breathing_wand", "water_breathing_wand"),
 		JUMP_BOOST_WAND("jump_boost_wand", "jump_boost_wand"),
+		SPEED_WAND("speed_wand", "speed_wand"),
+		HASTE_WAND("haste_wand", "haste_wand"),
 		
 		IAN_BOW("ian_bow", "ian_bow"),
 
