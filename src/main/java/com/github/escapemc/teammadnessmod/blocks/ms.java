@@ -45,7 +45,7 @@ public class ms extends Block {
         if (RANDOM.nextFloat() < 0.2F)
         	drops.add(new ItemStack(ModItems.epicbudder22_ingot));
         if (RANDOM.nextFloat() < 0.2F)
-        	drops.add(new ItemStack(ModItems.jonahjoe2002_ingot));
+        	drops.add(new ItemStack(ModItems.splixfpv_ingot));
         return drops;
     }
 }

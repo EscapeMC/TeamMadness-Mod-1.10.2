@@ -50,13 +50,6 @@ import com.github.escapemc.teammadnessmod.items.ianplaysyt_ingot;
 import com.github.escapemc.teammadnessmod.items.ianplaysyt_pickaxe;
 import com.github.escapemc.teammadnessmod.items.ianplaysyt_shovel;
 import com.github.escapemc.teammadnessmod.items.ianplaysyt_sword;
-import com.github.escapemc.teammadnessmod.items.jonahjoe2002_armor;
-import com.github.escapemc.teammadnessmod.items.jonahjoe2002_axe;
-import com.github.escapemc.teammadnessmod.items.jonahjoe2002_hoe;
-import com.github.escapemc.teammadnessmod.items.jonahjoe2002_ingot;
-import com.github.escapemc.teammadnessmod.items.jonahjoe2002_pickaxe;
-import com.github.escapemc.teammadnessmod.items.jonahjoe2002_shovel;
-import com.github.escapemc.teammadnessmod.items.jonahjoe2002_sword;
 import com.github.escapemc.teammadnessmod.items.jump_boost_wand;
 import com.github.escapemc.teammadnessmod.items.madness_armor;
 import com.github.escapemc.teammadnessmod.items.madness_axe;
@@ -78,6 +71,13 @@ import com.github.escapemc.teammadnessmod.items.mushrromstew_sword;
 import com.github.escapemc.teammadnessmod.items.nick_bag;
 import com.github.escapemc.teammadnessmod.items.rabbit_taco;
 import com.github.escapemc.teammadnessmod.items.speed_wand;
+import com.github.escapemc.teammadnessmod.items.splixfpv_armor;
+import com.github.escapemc.teammadnessmod.items.splixfpv_axe;
+import com.github.escapemc.teammadnessmod.items.splixfpv_hoe;
+import com.github.escapemc.teammadnessmod.items.splixfpv_ingot;
+import com.github.escapemc.teammadnessmod.items.splixfpv_pickaxe;
+import com.github.escapemc.teammadnessmod.items.splixfpv_shovel;
+import com.github.escapemc.teammadnessmod.items.splixfpv_sword;
 import com.github.escapemc.teammadnessmod.items.tortilla;
 import com.github.escapemc.teammadnessmod.items.water_breathing_wand;
 
@@ -97,7 +97,7 @@ public class ModItems {
 	public static Item escapemc_ingot;
 	public static Item mushrromstew_ingot;
 	public static Item epicbudder22_ingot;
-	public static Item jonahjoe2002_ingot;
+	public static Item splixfpv_ingot;
 	public static Item ianplaysyt_ingot;
 	public static Item bossface88_ingot;
 	public static Item diamondtips_ingot;
@@ -139,15 +139,15 @@ public class ModItems {
 	public static Item epicbudder22_leggings;
 	public static Item epicbudder22_boots;
 
-	public static Item jonahjoe2002_sword;
-	public static Item jonahjoe2002_pickaxe;
-	public static Item jonahjoe2002_axe;
-	public static Item jonahjoe2002_shovel;
-	public static Item jonahjoe2002_hoe;
-	public static Item jonahjoe2002_helmet;
-	public static Item jonahjoe2002_chestplate;
-	public static Item jonahjoe2002_leggings;
-	public static Item jonahjoe2002_boots;
+	public static Item splixfpv_sword;
+	public static Item splixfpv_pickaxe;
+	public static Item splixfpv_axe;
+	public static Item splixfpv_shovel;
+	public static Item splixfpv_hoe;
+	public static Item splixfpv_helmet;
+	public static Item splixfpv_chestplate;
+	public static Item splixfpv_leggings;
+	public static Item splixfpv_boots;
 
 	public static Item ianplaysyt_sword;
 	public static Item ianplaysyt_pickaxe;
@@ -221,7 +221,7 @@ public class ModItems {
 	public static final Item.ToolMaterial escapemc_tool_material = EnumHelper.addToolMaterial("escapemc_tool_material", 3, 1401, 7, 7, 30);
 	public static final Item.ToolMaterial mushrromstew_tool_material = EnumHelper.addToolMaterial("mushrromstew_tool_material", 3, 1401, 7, 7, 30);
 	public static final Item.ToolMaterial epicbudder22_tool_material = EnumHelper.addToolMaterial("epicbudder22_tool_material", 3, 1401, 7, 7, 30);
-	public static final Item.ToolMaterial jonahjoe2002_tool_material = EnumHelper.addToolMaterial("jonahjoe2002_tool_material", 3, 1401, 7, 7, 30);
+	public static final Item.ToolMaterial splixfpv_tool_material = EnumHelper.addToolMaterial("splixfpv_tool_material", 3, 1401, 7, 7, 30);
 	public static final Item.ToolMaterial diamondtips_tool_material = EnumHelper.addToolMaterial("diamondtips_tool_material", 3, 1401, 7, 7, 30);
 	public static final Item.ToolMaterial ianplaysyt_tool_material = EnumHelper.addToolMaterial("ianplaysyt_tool_material", 3, 1401, 7, 7, 30);
 	public static final Item.ToolMaterial bossface88_tool_material = EnumHelper.addToolMaterial("bosface88_tool_material", 3, 1401, 7, 7, 30);
@@ -242,7 +242,7 @@ public class ModItems {
 	public static ArmorMaterial escapemc_armor_material = EnumHelper.addArmorMaterial("escapemc_armor_material", "tmm:escapemc_armor_material", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
 	public static ArmorMaterial mushrromstew_armor_material = EnumHelper.addArmorMaterial("mushrromstew_armor_material", "tmm:mushrromstew_armor", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
 	public static ArmorMaterial epicbudder22_armor_material = EnumHelper.addArmorMaterial("epicbudder22_armor_material", "tmm:epicbudder22_armor", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
-	public static ArmorMaterial jonahjoe2002_armor_material = EnumHelper.addArmorMaterial("jonahjoe2002_armor_material", "tmm:jonahjoe2002_armor", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
+	public static ArmorMaterial splixfpv_armor_material = EnumHelper.addArmorMaterial("splixfpv_armor_material", "tmm:splixfpv_armor", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
 	public static ArmorMaterial diamondtips_armor_material = EnumHelper.addArmorMaterial("diamondtips_armor_material", "tmm:diamondtips_armor", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
 	public static ArmorMaterial ianplaysyt_armor_material = EnumHelper.addArmorMaterial("ianplaysyt_armor_material", "tmm:ianplaysyt_armor", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
 	public static ArmorMaterial bossface88_armor_material = EnumHelper.addArmorMaterial("bossface88_armor_material", "tmm:bossface88_armor", 3148, new int[] {3, 5, 7, 3}, 22, null, 0);	
@@ -260,7 +260,7 @@ public class ModItems {
 		escapemc_ingot = new escapemc_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
 		mushrromstew_ingot = new mushrromstew_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
 		epicbudder22_ingot = new epicbudder22_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
-		jonahjoe2002_ingot = new jonahjoe2002_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
+		splixfpv_ingot = new splixfpv_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
 		ianplaysyt_ingot = new ianplaysyt_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
 		bossface88_ingot = new bossface88_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
 		diamondtips_ingot = new diamondtips_ingot().setCreativeTab(Main.TeamMadnessModMaterialsTab);
@@ -296,15 +296,15 @@ public class ModItems {
 		epicbudder22_leggings = new epicbudder22_armor(epicbudder22_armor_material, 0, EntityEquipmentSlot.LEGS).setCreativeTab(Main.TeamMadnessModArmorTab);
 		epicbudder22_boots = new epicbudder22_armor(epicbudder22_armor_material, 0, EntityEquipmentSlot.FEET).setCreativeTab(Main.TeamMadnessModArmorTab);
 
-		jonahjoe2002_sword = new jonahjoe2002_sword(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		jonahjoe2002_pickaxe = new jonahjoe2002_pickaxe(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		jonahjoe2002_axe = new jonahjoe2002_axe(jonahjoe2002_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
-		jonahjoe2002_shovel = new jonahjoe2002_shovel(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		jonahjoe2002_hoe = new jonahjoe2002_hoe(jonahjoe2002_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
-		jonahjoe2002_helmet = new jonahjoe2002_armor(jonahjoe2002_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
-		jonahjoe2002_chestplate = new jonahjoe2002_armor(jonahjoe2002_armor_material, 0, EntityEquipmentSlot.CHEST).setCreativeTab(Main.TeamMadnessModArmorTab);
-		jonahjoe2002_leggings = new jonahjoe2002_armor(jonahjoe2002_armor_material, 0, EntityEquipmentSlot.LEGS).setCreativeTab(Main.TeamMadnessModArmorTab);
-		jonahjoe2002_boots = new jonahjoe2002_armor(jonahjoe2002_armor_material, 0, EntityEquipmentSlot.FEET).setCreativeTab(Main.TeamMadnessModArmorTab);
+		splixfpv_sword = new splixfpv_sword(splixfpv_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
+		splixfpv_pickaxe = new splixfpv_pickaxe(splixfpv_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
+		splixfpv_axe = new splixfpv_axe(splixfpv_tool_material, 12, -3).setCreativeTab(Main.TeamMadnessModItemsTab);
+		splixfpv_shovel = new splixfpv_shovel(splixfpv_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
+		splixfpv_hoe = new splixfpv_hoe(splixfpv_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
+		splixfpv_helmet = new splixfpv_armor(splixfpv_armor_material, 0, EntityEquipmentSlot.HEAD).setCreativeTab(Main.TeamMadnessModArmorTab);
+		splixfpv_chestplate = new splixfpv_armor(splixfpv_armor_material, 0, EntityEquipmentSlot.CHEST).setCreativeTab(Main.TeamMadnessModArmorTab);
+		splixfpv_leggings = new splixfpv_armor(splixfpv_armor_material, 0, EntityEquipmentSlot.LEGS).setCreativeTab(Main.TeamMadnessModArmorTab);
+		splixfpv_boots = new splixfpv_armor(splixfpv_armor_material, 0, EntityEquipmentSlot.FEET).setCreativeTab(Main.TeamMadnessModArmorTab);
 
 		ianplaysyt_sword = new ianplaysyt_sword(ianplaysyt_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
 		ianplaysyt_pickaxe = new ianplaysyt_pickaxe(ianplaysyt_tool_material).setCreativeTab(Main.TeamMadnessModItemsTab);
@@ -388,7 +388,7 @@ public class ModItems {
 		GameRegistry.register(escapemc_ingot);
 		GameRegistry.register(mushrromstew_ingot);
 		GameRegistry.register(epicbudder22_ingot);
-		GameRegistry.register(jonahjoe2002_ingot);
+		GameRegistry.register(splixfpv_ingot);
 		GameRegistry.register(ianplaysyt_ingot);
 		GameRegistry.register(bossface88_ingot);
 		GameRegistry.register(diamondtips_ingot);
@@ -423,15 +423,15 @@ public class ModItems {
 		GameRegistry.register(epicbudder22_leggings);
 		GameRegistry.register(epicbudder22_boots);
 
-		GameRegistry.register(jonahjoe2002_sword);
-		GameRegistry.register(jonahjoe2002_pickaxe);
-		GameRegistry.register(jonahjoe2002_axe);
-		GameRegistry.register(jonahjoe2002_shovel);
-		GameRegistry.register(jonahjoe2002_hoe);
-		GameRegistry.register(jonahjoe2002_helmet);
-		GameRegistry.register(jonahjoe2002_chestplate);
-		GameRegistry.register(jonahjoe2002_leggings);
-		GameRegistry.register(jonahjoe2002_boots);
+		GameRegistry.register(splixfpv_sword);
+		GameRegistry.register(splixfpv_pickaxe);
+		GameRegistry.register(splixfpv_axe);
+		GameRegistry.register(splixfpv_shovel);
+		GameRegistry.register(splixfpv_hoe);
+		GameRegistry.register(splixfpv_helmet);
+		GameRegistry.register(splixfpv_chestplate);
+		GameRegistry.register(splixfpv_leggings);
+		GameRegistry.register(splixfpv_boots);
 
 		GameRegistry.register(ianplaysyt_sword);
 		GameRegistry.register(ianplaysyt_pickaxe);
@@ -514,7 +514,7 @@ public class ModItems {
 		registerRender(escapemc_ingot);
 		registerRender(mushrromstew_ingot);
 		registerRender(epicbudder22_ingot);
-		registerRender(jonahjoe2002_ingot);
+		registerRender(splixfpv_ingot);
 		registerRender(ianplaysyt_ingot);
 		registerRender(bossface88_ingot);
 		registerRender(diamondtips_ingot);
@@ -549,15 +549,15 @@ public class ModItems {
 		registerRender(epicbudder22_leggings);
 		registerRender(epicbudder22_boots);
 
-		registerRender(jonahjoe2002_sword);
-		registerRender(jonahjoe2002_pickaxe);
-		registerRender(jonahjoe2002_axe);
-		registerRender(jonahjoe2002_shovel);
-		registerRender(jonahjoe2002_hoe);
-		registerRender(jonahjoe2002_helmet);
-		registerRender(jonahjoe2002_chestplate);
-		registerRender(jonahjoe2002_leggings);
-		registerRender(jonahjoe2002_boots);
+		registerRender(splixfpv_sword);
+		registerRender(splixfpv_pickaxe);
+		registerRender(splixfpv_axe);
+		registerRender(splixfpv_shovel);
+		registerRender(splixfpv_hoe);
+		registerRender(splixfpv_helmet);
+		registerRender(splixfpv_chestplate);
+		registerRender(splixfpv_leggings);
+		registerRender(splixfpv_boots);
 
 		registerRender(ianplaysyt_sword);
 		registerRender(ianplaysyt_pickaxe);

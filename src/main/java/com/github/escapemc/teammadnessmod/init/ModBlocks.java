@@ -8,12 +8,12 @@ import com.github.escapemc.teammadnessmod.blocks.diamondtips_ore;
 import com.github.escapemc.teammadnessmod.blocks.epicbudder22_ore;
 import com.github.escapemc.teammadnessmod.blocks.escapemc_ore;
 import com.github.escapemc.teammadnessmod.blocks.ianplaysyt_ore;
-import com.github.escapemc.teammadnessmod.blocks.jonahjoe2002_ore;
 import com.github.escapemc.teammadnessmod.blocks.madness_chest;
 import com.github.escapemc.teammadnessmod.blocks.madness_furnace;
 import com.github.escapemc.teammadnessmod.blocks.madness_ore;
 import com.github.escapemc.teammadnessmod.blocks.ms;
 import com.github.escapemc.teammadnessmod.blocks.mushrromstew_ore;
+import com.github.escapemc.teammadnessmod.blocks.splixfpv_ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -31,7 +31,7 @@ public class ModBlocks {
 	public static Block escapemc_ore;
 	public static Block mushrromstew_ore;
 	public static Block epicbudder22_ore;
-	public static Block jonahjoe2002_ore;
+	public static Block splixfpv_ore;
 	public static Block ianplaysyt_ore;
 	public static Block bossface88_ore;
 	public static Block diamondtips_ore;
@@ -53,7 +53,7 @@ public class ModBlocks {
 		escapemc_ore = new escapemc_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		mushrromstew_ore = new mushrromstew_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		epicbudder22_ore = new epicbudder22_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
-		jonahjoe2002_ore = new jonahjoe2002_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
+		splixfpv_ore = new splixfpv_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		ianplaysyt_ore = new ianplaysyt_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		bossface88_ore = new bossface88_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
 		diamondtips_ore = new diamondtips_ore(Material.IRON).setCreativeTab(Main.TeamMadnessModBlocksTab);
@@ -77,7 +77,7 @@ public class ModBlocks {
 		ModBlocks.registerBlock(escapemc_ore);
 		ModBlocks.registerBlock(mushrromstew_ore);
 		ModBlocks.registerBlock(epicbudder22_ore);
-		ModBlocks.registerBlock(jonahjoe2002_ore);
+		ModBlocks.registerBlock(splixfpv_ore);
 		ModBlocks.registerBlock(ianplaysyt_ore);
 		ModBlocks.registerBlock(bossface88_ore);
 		ModBlocks.registerBlock(diamondtips_ore);
@@ -115,7 +115,7 @@ public class ModBlocks {
 		registerRender(escapemc_ore);
 		registerRender(mushrromstew_ore);
 		registerRender(epicbudder22_ore);
-		registerRender(jonahjoe2002_ore);
+		registerRender(splixfpv_ore);
 		registerRender(ianplaysyt_ore);
 		registerRender(bossface88_ore);
 		registerRender(diamondtips_ore);

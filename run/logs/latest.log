@@ -1,111 +1,111 @@
-[17:40:39] [main/INFO]: Extra: []
-[17:40:39] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/robertmerryman/.gradle/caches/minecraft/assets, --assetIndex, 1.10, --accessToken{REDACTED}, --version, 1.10.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
-[17:40:39] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[17:40:39] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[17:40:39] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
-[17:40:39] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[17:40:39] [main/INFO]: Forge Mod Loader version 12.18.3.2185 for Minecraft 1.10.2 loading
-[17:40:39] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_101, running on Mac OS X:x86_64:10.12.2, installed at /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
-[17:40:39] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[17:40:39] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
-[17:40:39] [main/INFO]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
-[17:40:39] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
-[17:40:39] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:40:39] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[17:40:39] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[17:40:39] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:40:39] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:40:39] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[17:40:40] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[17:40:41] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
-[17:40:41] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[17:40:41] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[17:40:41] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[17:40:41] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[17:40:41] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[17:40:41] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[17:40:43] [Client thread/INFO]: Setting user: Player689
-[17:40:47] [Client thread/WARN]: Skipping bad option: lastServer:
-[17:40:47] [Client thread/INFO]: LWJGL Version: 2.9.2
-[17:40:48] [Client thread/INFO]: MinecraftForge v12.18.3.2185 Initialized
-[17:40:48] [Client thread/INFO]: Replaced 231 ore recipes
-[17:40:48] [Client thread/INFO]: Found 0 mods from the command line. Injecting into mod discoverer
-[17:40:48] [Client thread/INFO]: Searching /Users/robertmerryman/Desktop/Modding/TeamMadness-Mod-1.10.2/run/mods for mods
-[17:40:50] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
-[17:40:50] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, tmm] at CLIENT
-[17:40:50] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, tmm] at SERVER
-[17:40:51] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TeamMadness Mod
-[17:40:51] [Client thread/INFO]: Processing ObjectHolder annotations
-[17:40:51] [Client thread/INFO]: Found 423 ObjectHolder annotations
-[17:40:51] [Client thread/INFO]: Identifying ItemStackHolder annotations
-[17:40:51] [Client thread/INFO]: Found 0 ItemStackHolder annotations
-[17:40:51] [Client thread/INFO]: Applying holder lookups
-[17:40:51] [Client thread/INFO]: Holder lookups applied
-[17:40:51] [Client thread/INFO]: Applying holder lookups
-[17:40:51] [Client thread/INFO]: Holder lookups applied
-[17:40:51] [Client thread/INFO]: Applying holder lookups
-[17:40:51] [Client thread/INFO]: Holder lookups applied
-[17:40:51] [Client thread/INFO]: Configured a dormant chunk cache size of 0
-[17:40:51] [Forge Version Check/INFO]: [Forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[17:40:51] [Client thread/INFO]: [com.github.escapemc.teammadnessmod.Main:preinit:44]: Pre Init
-[17:40:52] [Client thread/INFO]: Applying holder lookups
-[17:40:52] [Client thread/INFO]: Holder lookups applied
-[17:40:52] [Client thread/INFO]: Injecting itemstacks
-[17:40:52] [Client thread/INFO]: Itemstack injection complete
-[17:40:52] [Forge Version Check/INFO]: [Forge] Found status: UP_TO_DATE Target: null
-[17:40:54] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:40:54] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[17:40:54] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:40:54] [Thread-6/INFO]: OpenAL initialized.
-[17:40:55] [Sound Library Loader/INFO]: Sound engine started
-[17:40:57] [Client thread/INFO]: Max texture size: 16384
-[17:40:57] [Client thread/INFO]: Created: 16x16 textures-atlas
-[17:40:59] [Client thread/INFO]: [com.github.escapemc.teammadnessmod.Main:init:63]: Init
-[17:40:59] [Client thread/INFO]: Injecting itemstacks
-[17:40:59] [Client thread/INFO]: Itemstack injection complete
-[17:40:59] [Client thread/INFO]: [com.github.escapemc.teammadnessmod.Main:postinit:78]: Post Init
-[17:40:59] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
-[17:40:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TeamMadness Mod
-[17:41:00] [Client thread/INFO]: SoundSystem shutting down...
-[17:41:00] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[17:41:00] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:41:01] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[17:41:01] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:41:01] [Thread-8/INFO]: OpenAL initialized.
-[17:41:01] [Sound Library Loader/INFO]: Sound engine started
-[17:41:02] [Client thread/INFO]: Max texture size: 16384
-[17:41:02] [Client thread/INFO]: Created: 2048x1024 textures-atlas
-[17:41:04] [Client thread/WARN]: Skipping bad option: lastServer:
-[17:41:05] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[17:41:10] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
-[17:41:10] [Server thread/INFO]: Generating keypair
-[17:41:10] [Server thread/INFO]: Injecting existing block and item data into this server instance
-[17:41:10] [Server thread/INFO]: Found a missing id from the world tmm:saturation_wand
-[17:41:10] [Server thread/ERROR]: There are unidentified mappings in this world - we are going to attempt to process anyway
-[17:41:10] [Server thread/ERROR]: Unidentified item: tmm:saturation_wand, id 4201
-[17:41:12] [Server thread/INFO]: World backup created at /Users/robertmerryman/Desktop/Modding/TeamMadness-Mod-1.10.2/run/saves/1_7_0_X-20170113-174112.zip.
-[17:41:12] [Server thread/WARN]: This world contains block and item mappings that may cause world breakage
-[17:41:13] [Server thread/INFO]: Applying holder lookups
-[17:41:13] [Server thread/INFO]: Holder lookups applied
-[17:41:13] [Server thread/INFO]: Loading dimension 0 (1.7.0.X) (net.minecraft.server.integrated.IntegratedServer@2b6baae1)
-[17:41:13] [Server thread/INFO]: Loading dimension 1 (1.7.0.X) (net.minecraft.server.integrated.IntegratedServer@2b6baae1)
-[17:41:13] [Server thread/INFO]: Loading dimension -1 (1.7.0.X) (net.minecraft.server.integrated.IntegratedServer@2b6baae1)
-[17:41:13] [Server thread/INFO]: Preparing start region for level 0
-[17:41:14] [Server thread/INFO]: Preparing spawn area: 12%
-[17:41:15] [Server thread/INFO]: Preparing spawn area: 75%
-[17:41:15] [Server thread/INFO]: Changing view distance to 12, from 10
-[17:41:16] [Netty Local Client IO #0/INFO]: Server protocol version 2
-[17:41:16] [Netty Server IO #1/INFO]: Client protocol version 2
-[17:41:16] [Netty Server IO #1/INFO]: Client attempting to join with 4 mods : FML@8.0.99.99,tmm@1.7.0.1,Forge@12.18.3.2185,mcp@9.19
-[17:41:16] [Netty Local Client IO #0/INFO]: [Netty Local Client IO #0] Client side modded connection established
-[17:41:16] [Server thread/INFO]: [Server thread] Server side modded connection established
-[17:41:16] [Server thread/INFO]: Player689[local:E:b6d9f0c3] logged in with entity id 221 at (205.68926358713682, 77.0, 264.0882044355511)
-[17:41:16] [Server thread/INFO]: Player689 joined the game
-[17:41:17] [Server thread/INFO]: Saving and pausing game...
-[17:41:17] [Server thread/INFO]: Saving chunks for level '1.7.0.X'/Overworld
-[17:41:17] [Server thread/INFO]: Saving chunks for level '1.7.0.X'/Nether
-[17:41:17] [Server thread/INFO]: Saving chunks for level '1.7.0.X'/The End
-[17:41:18] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@5ec0d9fe[id=e7f0f282-ec78-3bba-aaaf-9edc548f540d,name=Player689,properties={},legacy=false]
+[11:03:16] [main/INFO]: Extra: []
+[11:03:16] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/robertmerryman/.gradle/caches/minecraft/assets, --assetIndex, 1.10, --accessToken{REDACTED}, --version, 1.10.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[11:03:16] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:03:16] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:03:16] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[11:03:16] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:03:16] [main/INFO]: Forge Mod Loader version 12.18.3.2185 for Minecraft 1.10.2 loading
+[11:03:16] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_101, running on Mac OS X:x86_64:10.12.2, installed at /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+[11:03:16] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[11:03:16] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[11:03:16] [main/INFO]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[11:03:16] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[11:03:16] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:03:16] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[11:03:16] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[11:03:16] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:03:16] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:03:16] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:03:16] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[11:03:17] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[11:03:17] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:03:17] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[11:03:18] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[11:03:18] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:03:18] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:03:18] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[11:03:19] [Client thread/INFO]: Setting user: Player336
+[11:03:23] [Client thread/WARN]: Skipping bad option: lastServer:
+[11:03:23] [Client thread/INFO]: LWJGL Version: 2.9.2
+[11:03:23] [Client thread/INFO]: MinecraftForge v12.18.3.2185 Initialized
+[11:03:23] [Client thread/INFO]: Replaced 231 ore recipes
+[11:03:24] [Client thread/INFO]: Found 0 mods from the command line. Injecting into mod discoverer
+[11:03:24] [Client thread/INFO]: Searching /Users/robertmerryman/Desktop/Modding/TeamMadness-Mod-1.10.2/run/mods for mods
+[11:03:25] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
+[11:03:26] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, tmm] at CLIENT
+[11:03:26] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, tmm] at SERVER
+[11:03:26] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TeamMadness Mod
+[11:03:26] [Client thread/INFO]: Processing ObjectHolder annotations
+[11:03:26] [Client thread/INFO]: Found 423 ObjectHolder annotations
+[11:03:26] [Client thread/INFO]: Identifying ItemStackHolder annotations
+[11:03:26] [Client thread/INFO]: Found 0 ItemStackHolder annotations
+[11:03:26] [Client thread/INFO]: Applying holder lookups
+[11:03:26] [Client thread/INFO]: Holder lookups applied
+[11:03:26] [Client thread/INFO]: Applying holder lookups
+[11:03:26] [Client thread/INFO]: Holder lookups applied
+[11:03:26] [Client thread/INFO]: Applying holder lookups
+[11:03:26] [Client thread/INFO]: Holder lookups applied
+[11:03:27] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[11:03:27] [Forge Version Check/INFO]: [Forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[11:03:27] [Client thread/INFO]: [com.github.escapemc.teammadnessmod.Main:preinit:44]: Pre Init
+[11:03:27] [Client thread/INFO]: Applying holder lookups
+[11:03:27] [Client thread/INFO]: Holder lookups applied
+[11:03:27] [Client thread/INFO]: Injecting itemstacks
+[11:03:27] [Client thread/INFO]: Itemstack injection complete
+[11:03:29] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:03:29] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[11:03:29] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:03:29] [Thread-6/INFO]: OpenAL initialized.
+[11:03:29] [Forge Version Check/INFO]: [Forge] Found status: UP_TO_DATE Target: null
+[11:03:29] [Sound Library Loader/INFO]: Sound engine started
+[11:03:32] [Client thread/INFO]: Max texture size: 16384
+[11:03:32] [Client thread/INFO]: Created: 16x16 textures-atlas
+[11:03:35] [Client thread/INFO]: [com.github.escapemc.teammadnessmod.Main:init:63]: Init
+[11:03:35] [Client thread/INFO]: Injecting itemstacks
+[11:03:35] [Client thread/INFO]: Itemstack injection complete
+[11:03:35] [Client thread/INFO]: [com.github.escapemc.teammadnessmod.Main:postinit:78]: Post Init
+[11:03:35] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
+[11:03:35] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:TeamMadness Mod
+[11:03:38] [Client thread/INFO]: SoundSystem shutting down...
+[11:03:38] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:03:38] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:03:38] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[11:03:38] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:03:38] [Thread-8/INFO]: OpenAL initialized.
+[11:03:39] [Sound Library Loader/INFO]: Sound engine started
+[11:03:41] [Client thread/INFO]: Max texture size: 16384
+[11:03:41] [Client thread/INFO]: Created: 2048x1024 textures-atlas
+[11:03:44] [Client thread/WARN]: Skipping bad option: lastServer:
+[11:03:44] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[11:03:55] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[11:03:55] [Server thread/INFO]: Generating keypair
+[11:03:55] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[11:03:55] [Server thread/INFO]: Applying holder lookups
+[11:03:55] [Server thread/INFO]: Holder lookups applied
+[11:03:55] [Server thread/INFO]: Loading dimension 0 (1.7.0.1 Final) (net.minecraft.server.integrated.IntegratedServer@4af02623)
+[11:03:56] [Server thread/INFO]: Loading dimension 1 (1.7.0.1 Final) (net.minecraft.server.integrated.IntegratedServer@4af02623)
+[11:03:56] [Server thread/INFO]: Loading dimension -1 (1.7.0.1 Final) (net.minecraft.server.integrated.IntegratedServer@4af02623)
+[11:03:56] [Server thread/INFO]: Preparing start region for level 0
+[11:03:57] [Server thread/INFO]: Preparing spawn area: 6%
+[11:03:58] [Server thread/INFO]: Preparing spawn area: 11%
+[11:03:59] [Server thread/INFO]: Preparing spawn area: 18%
+[11:04:00] [Server thread/INFO]: Preparing spawn area: 25%
+[11:04:02] [Server thread/INFO]: Preparing spawn area: 33%
+[11:04:03] [Server thread/INFO]: Preparing spawn area: 42%
+[11:04:04] [Server thread/INFO]: Preparing spawn area: 52%
+[11:04:05] [Server thread/INFO]: Preparing spawn area: 62%
+[11:04:06] [Server thread/INFO]: Preparing spawn area: 73%
+[11:04:07] [Server thread/INFO]: Preparing spawn area: 84%
+[11:04:08] [Server thread/INFO]: Preparing spawn area: 97%
+[11:04:08] [Server thread/INFO]: Changing view distance to 12, from 10
+[11:04:09] [Netty Local Client IO #0/INFO]: Server protocol version 2
+[11:04:09] [Netty Server IO #1/INFO]: Client protocol version 2
+[11:04:09] [Netty Server IO #1/INFO]: Client attempting to join with 4 mods : FML@8.0.99.99,tmm@1.7.0.1,Forge@12.18.3.2185,mcp@9.19
+[11:04:09] [Netty Local Client IO #0/INFO]: [Netty Local Client IO #0] Client side modded connection established
+[11:04:09] [Server thread/INFO]: [Server thread] Server side modded connection established
+[11:04:09] [Server thread/INFO]: Player336[local:E:4b92f72d] logged in with entity id 1041 at (188.5, 64.0, 246.5)
+[11:04:09] [Server thread/INFO]: Player336 joined the game
+[11:04:11] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@10c5158c[id=2eef3335-8d1f-3428-af42-f3cec9010d4c,name=Player336,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
@@ -127,18 +127,57 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_101]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_101]
 	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_101]
-[17:41:21] [Server thread/INFO]: Player689 has just earned the achievement [Taking Inventory]
-[17:41:21] [Client thread/INFO]: [CHAT] Player689 has just earned the achievement [Taking Inventory]
-[17:42:14] [Client thread/INFO]: Stopping!
-[17:42:14] [Client thread/INFO]: SoundSystem shutting down...
-[17:42:14] [Server thread/INFO]: Stopping server
-[17:42:14] [Server thread/INFO]: Saving players
-[17:42:14] [Server thread/INFO]: Saving worlds
-[17:42:14] [Server thread/INFO]: Saving chunks for level '1.7.0.X'/Overworld
-[17:42:14] [Server thread/INFO]: Saving chunks for level '1.7.0.X'/Nether
-[17:42:14] [Server thread/INFO]: Saving chunks for level '1.7.0.X'/The End
-[17:42:14] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[17:42:14] [Client Shutdown Thread/INFO]: Stopping server
-[17:42:14] [Client Shutdown Thread/INFO]: Saving players
-[17:42:14] [Client Shutdown Thread/INFO]: Saving worlds
-[17:42:14] [Client Shutdown Thread/INFO]: Saving chunks for level '1.7.0.X'/Overworld
+[11:04:15] [Server thread/INFO]: Player336 has just earned the achievement [Taking Inventory]
+[11:04:16] [Client thread/INFO]: [CHAT] Player336 has just earned the achievement [Taking Inventory]
+[11:04:18] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 8372ms behind, skipping 167 tick(s)
+[11:04:34] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 7561ms behind, skipping 151 tick(s)
+[11:04:35] [Client thread/WARN]: Failed to load texture: tmm:textures/models/armor/splixfpv_armor_layer_1.png
+java.io.FileNotFoundException: tmm:textures/models/armor/splixfpv_armor_layer_1.png
+	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:68) ~[FallbackResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:65) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SourceFile:28) ~[SimpleTexture.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(TextureManager.java:67) [TextureManager.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.bindTexture(TextureManager.java:42) [TextureManager.class:?]
+	at net.minecraft.client.renderer.entity.Render.bindTexture(SourceFile:98) [Render.class:?]
+	at net.minecraft.client.renderer.entity.layers.LayerArmorBase.renderArmorLayer(LayerArmorBase.java:66) [LayerArmorBase.class:?]
+	at net.minecraft.client.renderer.entity.layers.LayerArmorBase.doRenderLayer(LayerArmorBase.java:41) [LayerArmorBase.class:?]
+	at net.minecraft.client.renderer.entity.RenderLivingBase.renderLayers(RenderLivingBase.java:436) [RenderLivingBase.class:?]
+	at net.minecraft.client.renderer.entity.RenderLivingBase.doRender(RenderLivingBase.java:188) [RenderLivingBase.class:?]
+	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:70) [RenderPlayer.class:?]
+	at net.minecraft.client.renderer.entity.RenderPlayer.doRender(RenderPlayer.java:28) [RenderPlayer.class:?]
+	at net.minecraft.client.renderer.entity.RenderManager.doRenderEntity(RenderManager.java:366) [RenderManager.class:?]
+	at net.minecraft.client.gui.inventory.GuiInventory.drawEntityOnScreen(SourceFile:94) [GuiInventory.class:?]
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawGuiContainerBackgroundLayer(GuiContainerCreative.java:747) [GuiContainerCreative.class:?]
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:76) [GuiContainer.class:?]
+	at net.minecraft.client.renderer.InventoryEffectRenderer.drawScreen(InventoryEffectRenderer.java:51) [InventoryEffectRenderer.class:?]
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.drawScreen(GuiContainerCreative.java:591) [GuiContainerCreative.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:382) [ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1094) [EntityRenderer.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1076) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:371) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:124) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_101]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_101]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:26) [start/:?]
+[11:04:51] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5543ms behind, skipping 110 tick(s)
+[11:05:06] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2710ms behind, skipping 54 tick(s)
+[11:05:59] [Client thread/INFO]: Stopping!
+[11:05:59] [Client thread/INFO]: SoundSystem shutting down...
+[11:05:59] [Server thread/INFO]: Stopping server
+[11:05:59] [Server thread/INFO]: Saving players
+[11:05:59] [Server thread/INFO]: Saving worlds
+[11:05:59] [Server thread/INFO]: Saving chunks for level '1.7.0.1 Final'/Overworld
+[11:05:59] [Server thread/INFO]: Saving chunks for level '1.7.0.1 Final'/Nether
+[11:05:59] [Server thread/INFO]: Saving chunks for level '1.7.0.1 Final'/The End
+[11:05:59] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:05:59] [Client Shutdown Thread/INFO]: Stopping server
+[11:05:59] [Client Shutdown Thread/INFO]: Saving players

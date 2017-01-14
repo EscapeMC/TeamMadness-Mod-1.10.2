@@ -48,17 +48,17 @@ public class ModCrafting {
 		GameRegistry.addRecipe(new ItemStack(ModItems.epicbudder22_leggings), new Object[] {"###", "# #", "# #", '#', ModItems.epicbudder22_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.epicbudder22_boots), new Object[] {"# #", "# #", '#', ModItems.epicbudder22_ingot});
 
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_sword), new Object[] {"#", "#", "S", '#', ModItems.jonahjoe2002_ingot, 'S', Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_pickaxe), new Object[] {"###", " S ", " S ", '#', ModItems.jonahjoe2002_ingot, 'S', Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_axe), new Object[] {"##", "S#", "S ", '#', ModItems.jonahjoe2002_ingot, 'S', Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_axe), new Object[] {"##", "#S", " S", '#', ModItems.jonahjoe2002_ingot, 'S', Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_shovel), new Object[] {"#", "S", "S", '#', ModItems.jonahjoe2002_ingot, 'S', Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_hoe), new Object[] {"##", "S ", "S ", '#', ModItems.jonahjoe2002_ingot, 'S', Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_hoe), new Object[] {"##", " S", " S", '#', ModItems.jonahjoe2002_ingot, 'S', Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_helmet), new Object[] {"###", "# #", '#', ModItems.jonahjoe2002_ingot});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_chestplate), new Object[] {"# #", "###", "###", '#', ModItems.jonahjoe2002_ingot});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_leggings), new Object[] {"###", "# #", "# #", '#', ModItems.jonahjoe2002_ingot});
-		GameRegistry.addRecipe(new ItemStack(ModItems.jonahjoe2002_boots), new Object[] {"# #", "# #", '#', ModItems.jonahjoe2002_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_sword), new Object[] {"#", "#", "S", '#', ModItems.splixfpv_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_pickaxe), new Object[] {"###", " S ", " S ", '#', ModItems.splixfpv_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_axe), new Object[] {"##", "S#", "S ", '#', ModItems.splixfpv_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_axe), new Object[] {"##", "#S", " S", '#', ModItems.splixfpv_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_shovel), new Object[] {"#", "S", "S", '#', ModItems.splixfpv_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_hoe), new Object[] {"##", "S ", "S ", '#', ModItems.splixfpv_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_hoe), new Object[] {"##", " S", " S", '#', ModItems.splixfpv_ingot, 'S', Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_helmet), new Object[] {"###", "# #", '#', ModItems.splixfpv_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_chestplate), new Object[] {"# #", "###", "###", '#', ModItems.splixfpv_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_leggings), new Object[] {"###", "# #", "# #", '#', ModItems.splixfpv_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.splixfpv_boots), new Object[] {"# #", "# #", '#', ModItems.splixfpv_ingot});
 
 		GameRegistry.addRecipe(new ItemStack(ModItems.ianplaysyt_sword), new Object[] {"#", "#", "S", '#', ModItems.ianplaysyt_ingot, 'S', Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(ModItems.ianplaysyt_pickaxe), new Object[] {"###", " S ", " S ", '#', ModItems.ianplaysyt_ingot, 'S', Items.STICK});
@@ -143,7 +143,7 @@ public class ModCrafting {
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.escapemc_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.mushrromstew_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.epicbudder22_ingot});
-		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.jonahjoe2002_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.splixfpv_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.ianplaysyt_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.bossface88_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.madness_dust), new Object[] {"#", '#', ModItems.diamondtips_ingot});
@@ -151,7 +151,7 @@ public class ModCrafting {
 
 		GameRegistry.addRecipe(new ItemStack(ModItems.water_breathing_wand), new Object[] {"#E#", "ESE", "#E#", '#', ModItems.madness_dust, 'E', ModItems.escapemc_ingot, 'S', Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(ModItems.jump_boost_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.ianplaysyt_ingot, 'S', Items.STICK, 'I', ModItems.epicbudder22_ingot});
-		GameRegistry.addRecipe(new ItemStack(ModItems.speed_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.bossface88_ingot, 'S', Items.STICK, 'I', ModItems.jonahjoe2002_ingot});
+		GameRegistry.addRecipe(new ItemStack(ModItems.speed_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.bossface88_ingot, 'S', Items.STICK, 'I', ModItems.splixfpv_ingot});
 		GameRegistry.addRecipe(new ItemStack(ModItems.haste_wand), new Object[] {"#I#", "ESE", "#I#", '#', ModItems.madness_dust, 'E', ModItems.diamondtips_ingot, 'S', Items.STICK, 'I', ModItems.mushrromstew_ingot});
 
 		
@@ -160,7 +160,7 @@ public class ModCrafting {
 		GameRegistry.addSmelting(ModBlocks.escapemc_ore, new ItemStack(ModItems.escapemc_ingot), 5.0F);
 		GameRegistry.addSmelting(ModBlocks.mushrromstew_ore, new ItemStack(ModItems.mushrromstew_ingot), 5.0F);
 		GameRegistry.addSmelting(ModBlocks.epicbudder22_ore, new ItemStack(ModItems.epicbudder22_ingot), 5.0F);
-		GameRegistry.addSmelting(ModBlocks.jonahjoe2002_ore, new ItemStack(ModItems.jonahjoe2002_ingot), 5.0F);
+		GameRegistry.addSmelting(ModBlocks.splixfpv_ore, new ItemStack(ModItems.splixfpv_ingot), 5.0F);
 		GameRegistry.addSmelting(ModBlocks.madness_ore, new ItemStack(ModItems.madness_shard), 25.0F);
 		GameRegistry.addSmelting(ModBlocks.ianplaysyt_ore, new ItemStack(ModItems.ianplaysyt_ingot), 5.0F);
 		GameRegistry.addSmelting(ModBlocks.bossface88_ore, new ItemStack(ModItems.bossface88_ingot), 5.0F);

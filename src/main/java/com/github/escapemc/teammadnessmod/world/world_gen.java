@@ -21,7 +21,7 @@ public class world_gen implements IWorldGenerator {
         this.runGenerator(this.gen_escapemc_ore, world, random, chunkX, chunkZ, 7, 0, 48);
         this.runGenerator(this.gen_mushrromstew_ore, world, random, chunkX, chunkZ, 7, 0, 48);
         this.runGenerator(this.gen_epicbudder22_ore, world, random, chunkX, chunkZ, 7, 0, 48);
-        this.runGenerator(this.gen_jonahjoe2002_ore, world, random, chunkX, chunkZ, 7, 0, 48);
+        this.runGenerator(this.gen_splixfpv_ore, world, random, chunkX, chunkZ, 7, 0, 48);
         this.runGenerator(this.gen_ianplaysyt_ore, world, random, chunkX, chunkZ, 7, 0, 48);
         this.runGenerator(this.gen_bossface88_ore, world, random, chunkX, chunkZ, 7, 0, 48);
         this.runGenerator(this.gen_diamondtips_ore, world, random, chunkX, chunkZ, 7, 0, 48);
@@ -40,7 +40,7 @@ public class world_gen implements IWorldGenerator {
     private WorldGenerator gen_escapemc_ore;
     private WorldGenerator gen_mushrromstew_ore;
     private WorldGenerator gen_epicbudder22_ore;
-    private WorldGenerator gen_jonahjoe2002_ore;
+    private WorldGenerator gen_splixfpv_ore;
     private WorldGenerator gen_ianplaysyt_ore;
     private WorldGenerator gen_bossface88_ore;
     private WorldGenerator gen_diamondtips_ore;
@@ -53,7 +53,7 @@ public class world_gen implements IWorldGenerator {
         this.gen_escapemc_ore = new WorldGenMinable(ModBlocks.escapemc_ore.getDefaultState(), 6);
         this.gen_mushrromstew_ore = new WorldGenMinable(ModBlocks.mushrromstew_ore.getDefaultState(), 6);
         this.gen_epicbudder22_ore = new WorldGenMinable(ModBlocks.epicbudder22_ore.getDefaultState(), 6);
-        this.gen_jonahjoe2002_ore = new WorldGenMinable(ModBlocks.jonahjoe2002_ore.getDefaultState(), 6);
+        this.gen_splixfpv_ore = new WorldGenMinable(ModBlocks.splixfpv_ore.getDefaultState(), 6);
         this.gen_ianplaysyt_ore = new WorldGenMinable(ModBlocks.ianplaysyt_ore.getDefaultState(), 6);
         this.gen_bossface88_ore = new WorldGenMinable(ModBlocks.bossface88_ore.getDefaultState(), 6);
         this.gen_diamondtips_ore = new WorldGenMinable(ModBlocks.diamondtips_ore.getDefaultState(), 6);

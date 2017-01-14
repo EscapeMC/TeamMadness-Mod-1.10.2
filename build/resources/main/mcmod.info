@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tmm",
+  "name": "TeamMadness Mod",
+  "description": "Adds lots or sets of gear in accordance to my friends and I.",
+  "version": "1.7.0.1",
+  "mcversion": "1.10.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["EscapeMC"],
+  "credits": "EscapeMC",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
